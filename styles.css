@@ -1,0 +1,359 @@
+h1{
+    text-align: center;
+}
+.grid-container1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px;
+    column-gap: 500px;
+    height: 400px;
+    
+}
+.bc1{
+    background-color: #141829;
+}
+.bc2{
+    background-color: #1A3636;
+    padding-top: 30px;
+    border-bottom: 0.5px solid white  ;
+
+}
+.bc3{
+    background-color: #373A40;
+    padding-top: 30px;
+}
+.nav-link {
+    color: white !important; /* Ensure the color is applied even if there are other styles */
+}
+.mypic {
+    margin-top: 70px;
+    height: 250px;
+    width: 200px;
+}
+.cv{
+    width: 150px;
+    height: 50px;
+    margin-left: 175px;
+    font-family:  monospace;
+    font-size: 150px;
+}
+.name{
+    margin-top: 70px;
+    margin-left: 50px;
+    margin-bottom: 0px;
+    height: 45px;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}
+
+@keyframes typing-and-pausing {
+    0% { width: 0; }
+    80% { width: 100%; } /* Typing duration */
+    100% { width: fit-content } /* Pause duration */
+}
+
+.name {
+    font-family: monospace;
+    overflow: hidden; /* Ensures the text stays within the element */
+    border-right: .1em solid orange; /* The cursor */
+    white-space: nowrap; /* Keeps the text on a single line */
+    animation: typing-and-pausing 3s steps(40, end) infinite, blink-caret .75s step-end infinite;
+    width: fit-content; /* Adjust to fit your text length */
+}
+.grid-container2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 300px;
+    row-gap: 50px;
+}
+.primg{
+    height: 200px;
+    width: 300px;
+    margin-top: 25px;
+}
+.pr1{
+    margin-left: 200px;
+    margin-top: 50px;
+}
+.pr3{
+    margin-left: 175px;
+}
+.img1{
+    margin-left: 150px;
+}
+.img3{
+    margin-left: 190px;
+    width: 200px;
+}
+.pr2{
+    margin-top: 50px;
+    margin-left: 40px;
+}
+
+.skillpoints{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 30px;
+}
+.left{
+    margin-left: 250px;
+    margin-top: 50px;
+    width: 200px;
+}
+.right{
+    margin-left: 200px;
+    margin-top: 50px;
+    width: 200px;
+
+}
+.skimg{
+    height: 40px;
+    width: 40px;
+}
+.touch{
+    height: 50px;
+    width: 50px;
+    margin-top: 25px;
+    border-radius: 50%;
+}
+.flex-container{
+    display: flex;
+    gap: 50px;
+   justify-content: center;
+}
+.cursor-style {
+    font-family: monospace;
+    overflow: hidden;
+    border-right: .1em solid orange;
+    white-space: nowrap;
+    animation: typing-and-pausing1 2s steps(40, end) infinite, blink-caret .75s step-end infinite;
+    width: fit-content;
+    margin: auto;
+}
+#projects{
+    animation: typing-and-pausing2 2s steps(40, end) infinite, blink-caret .75s step-end infinite;
+}
+#skills{
+    animation: typing-and-pausing3 2s steps(40, end) infinite, blink-caret .75s step-end infinite;
+}
+#about{
+    animation: typing-and-pausing2 2s steps(40, end) infinite, blink-caret .75s step-end infinite;
+}
+@keyframes typing-and-pausing1 {
+    0% { width: 0; }
+    80% { width: 28%; } /* Typing duration */
+    100% { width: fit-content; } /* Pause duration */
+}
+@keyframes typing-and-pausing2 {
+    0% { width: 0; }
+    80% { width: 18%; } /* Typing duration */
+    100% { width: fit-content; } /* Pause duration */
+}
+@keyframes typing-and-pausing3 {
+    0% { width: 0; }
+    80% { width: 15%; } /* Typing duration */
+    100% { width: fit-content; } /* Pause duration */
+}
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.skillpoints li {
+    opacity: 0; /* Start hidden */
+}
+
+.skillpoints li.fade-in-left {
+    animation: fadeInLeft 1s forwards;
+}
+
+.skillpoints li.fade-in-right {
+    animation: fadeInRight 1s forwards;
+}
+.skillcontainer {
+    border-bottom: 1px white solid;
+    padding-bottom: 100px; /* Optional: Adjust padding as needed */
+    margin-bottom: 100px; /* Optional: Adjust margin as needed */
+}
+@keyframes fadeInLeftt {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRightt {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.project-item {
+    opacity: 0; /* Start hidden */
+    transition: opacity 1s, transform 1s; /* Ensure smooth transition */
+}
+
+.project-item.fade-in-leftt {
+    animation: fadeInLeftt 1s forwards;
+}
+
+.project-item.fade-in-rightt {
+    animation: fadeInRightt 1s forwards;
+}
+span {
+    font-family: "Playwrite VN", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400px;
+    font-style: normal;
+  }
+  .bc4 {
+    background-color: #141829;
+    color: white;
+    padding-top: 20px; /* Add padding-top to ensure there's space above */
+    padding-bottom: 20px; /* Add padding-bottom to ensure there's space below */
+    margin-top: -100px;
+    border-top: 0.5px solid white ;
+    border-bottom: 0.5px solid white  ;
+}
+.bc3 {
+    padding: 20px;
+    margin: 0;
+}
+.projectcontainer{
+    margin-top: -50px;
+}
+@media(max-width:768px){
+    .grid-container1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text */
+      }
+    
+      .mypic {
+        width: 50%;
+        height: 250px;
+        margin-top: 30px;
+    }
+    .button{
+        padding-top: 70px;
+    }
+    .cv {
+        margin-left: 0px;
+        text-align: center;
+        width: 120px;
+        font-family:  monospace;
+        font-size: 80px;
+    }
+
+    .name {
+        margin-top: 20px;
+        margin-left: 0;
+        font-size: 2rem;
+        height: auto;
+        width: fit-content;
+        padding-bottom: 40px;
+    }
+    
+      .skillpoints {
+        margin-left: 0;
+        font-size: 15px; /* Adjust font size for smaller screens */
+        gap: 0;
+      }
+    .left{
+        width: 140px;
+        margin-left: 20px;
+    }
+    .right{
+        margin-left: 80px;
+    }
+      .skimg {
+        height: 15px;
+        width: 15px;
+      }
+    
+    .grid-container2{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .primg{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .pr1{
+        margin-left: 0;
+    }
+    .pr3{
+        margin-left: 0;
+    }
+    .pr{
+        text-align: center;
+    }
+    #contact{
+        margin-top: 50px;
+    }
+    
+    @keyframes blink-caret {
+        from, to { border-color: transparent; }
+        50% { border-color: white; }
+    }
+    
+    @keyframes typing-and-pausing {
+        0% { width: 0; }
+        80% { width: 70%; } /* Typing duration */
+        100% { width: fit-content; } /* Pause duration */
+    }
+    @keyframes typing-and-pausing1 {
+        0% { width: 0; }
+        80% { width: 60%; } /* Typing duration */
+        100% { width: 60%; } /* Pause duration */
+    }
+    @keyframes typing-and-pausing2 {
+        0% { width: 0; }
+        80% { width: 40%; } /* Typing duration */
+        100% { width: fit-content; } /* Pause duration */
+    }
+    @keyframes typing-and-pausing3 {
+        0% { width: 0; }
+        80% { width: 30%; } /* Typing duration */
+        100% { width: fit-content; } /* Pause duration */
+    }  
+    .pr44{
+        margin-bottom: 30px;
+    }
+    .contactcontainer{
+        margin-top: -40px;
+    }
+}
