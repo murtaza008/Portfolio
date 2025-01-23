@@ -1,0 +1,844 @@
+/* Keyframe animation for sliding from the left */
+@keyframes slideFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+        /* Initially off-screen to the left */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        /* Move to the original position */
+    }
+}
+
+/* Initially hide aboutimg */
+.aboutimg {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* When aboutimg is visible, apply the animation */
+.aboutimg.visible {
+    animation: slideFromLeft 0.5s ease-out forwards;
+}
+
+/* Keyframe animations for projects */
+@keyframes slideFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Initially hide project elements */
+.project1,
+.project2,
+.project3 {
+    opacity: 0;
+    transform: translateX(0);
+}
+
+/* Add animation when project is visible */
+.project1.visible {
+    animation: slideFromLeft 0.5s ease-out forwards;
+}
+
+.project2.visible {
+    animation: slideFromTop 0.5s ease-out forwards;
+}
+
+.project3.visible {
+    animation: slideFromRight 0.5s ease-out forwards;
+}
+
+/* Keyframes for cards sliding in from left */
+@keyframes slideFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+        /* Slide from left */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        /* End at original position */
+    }
+}
+
+/* Keyframes for cards sliding in from right */
+@keyframes slideFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50%);
+        /* Slide from right */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        /* End at original position */
+    }
+}
+
+/* Initially hide the cards off-screen */
+.card {
+    opacity: 0;
+    transform: translateX(0);
+}
+
+/* Cards sliding from left */
+.card.left.visible {
+    animation: slideFromLeft 0.5s ease-out forwards;
+}
+
+/* Cards sliding from right */
+.card.right.visible {
+    animation: slideFromRight 0.5s ease-out forwards;
+}
+
+/* Define keyframe animation */
+@keyframes slideFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50%);
+        /* Slide from a more reasonable position */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        /* End at original position */
+    }
+}
+
+/* Initially hide the skill bars and headings off-screen */
+.skill-bar,
+.about h3 {
+    opacity: 0;
+    transform: translateX(50%);
+    /* Off-screen right but within viewport */
+}
+
+/* Add animation property for sliding effect */
+.skill-bar.visible,
+.about h3.visible {
+    animation: slideFromRight 0.5s ease-out forwards;
+}
+
+body {
+    overflow-x: hidden;
+    /* Disable horizontal scrolling */
+}
+
+.container {
+    overflow-x: hidden;
+    /* Disable horizontal scrolling for the specific container */
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+}
+
+header>p {
+    font-weight: 550;
+    font-size: larger;
+}
+
+.navDiv ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.navDiv li {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.navDiv {
+    margin-left: 50px;
+}
+
+header p {
+    margin-left: 20%;
+}
+
+.summary-para {
+    width: 500px;
+}
+
+.myself-container {
+    display: flex;
+    margin-top: 10%;
+}
+
+.img-socials {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.socials {
+    margin-top: 3%;
+    align-self: center;
+    width: 20%;
+}
+
+.intro {
+    margin-left: 10%;
+}
+
+.socials i {
+    margin-left: 3%;
+}
+
+.about-container {
+    margin-top: 20%;
+    display: flex;
+}
+
+.about {
+    margin-left: 20%;
+    width: 40%;
+}
+
+.service-container {
+    margin-top: 20%;
+}
+
+.service-container h1 {
+    text-align: center;
+}
+
+.service-container p {
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.services {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5%;
+}
+
+.card svg {
+    height: 50px;
+    width: 50px;
+    margin-top: 15%;
+    margin-left: 6%;
+}
+
+.project-container {
+    margin-top: 10%;
+}
+
+.project-container h1 {
+    text-align: center;
+}
+
+.project-container p {
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.headerDiv {
+    margin-top: 2%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.project-img {
+    width: 25%;
+    height: 25%;
+}
+
+.project-images {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.project-name {
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-container {
+    margin-top: 10%;
+}
+
+.contact-container h1 {
+    text-align: center;
+}
+
+.contact-container p {
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.email {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.cv {
+    background-color: #ff8233;
+    color: white;
+    border: 0;
+    border-radius: 3px;
+    width: 120px;
+}
+
+.cv span {
+    font-size: smaller;
+    width: 100%;
+}
+
+.name {
+    font-weight: 900;
+    font-size: 25px;
+}
+
+.intro h1 {
+    color: #ff8233;
+
+}
+
+.developer {
+    margin-bottom: 3%;
+    margin-left: 20%;
+
+}
+
+.hire {
+    width: 25%;
+    height: 35px;
+    font-size: small;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.intro h1 {
+    font-weight: 900;
+    font-size: 50px;
+}
+
+.hi {
+    font-weight: 600;
+}
+
+.social-icon {
+    font-size: 25px;
+}
+
+a {
+    color: black;
+}
+
+.about h1 {
+    font-weight: 550;
+}
+
+.about h3 {
+    font-size: 15px;
+    font-weight: 520;
+}
+
+.skill-bar {
+    width: 95%;
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    margin: 8px 0;
+}
+
+.skill-level {
+    height: 10px;
+    border-radius: 20px;
+    text-align: right;
+    padding-right: 5px;
+    color: white;
+    line-height: 20px;
+}
+
+.skill-level.javascript {
+    width: 95%;
+    background-color: #ff8233;
+}
+
+.skill-level.react {
+    width: 85%;
+    background-color: #ff8233;
+}
+
+.skill-level.php {
+    width: 80%;
+    background-color: #ff8233;
+}
+
+.skill-level.database {
+    width: 90%;
+    background-color: #ff8233;
+}
+
+.about li {
+    margin-top: 25px;
+}
+
+.about ul {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.service-container h1 {
+    font-weight: 550;
+}
+
+.service-container p {
+    margin-top: 30px;
+}
+
+.card {
+    width: 20%;
+    height: 250px;
+    background-color: #f2f2f2;
+    border: 0;
+}
+
+.card p {
+    font-size: smaller;
+    margin-top: 5%;
+    width: 100%;
+    margin-left: 0;
+}
+
+.card h6 {
+    font-weight: 550;
+    margin-bottom: 0;
+}
+
+.project-container h1 {
+    font-weight: 550;
+    margin-bottom: 30px;
+}
+
+.project-name h6 {
+    font-weight: 550;
+}
+
+.contact-container h1 {
+    font-weight: 550;
+    margin-bottom: 30px;
+}
+
+.contact-container p {
+    margin-bottom: 5%;
+}
+
+.contact {
+    height: 45px;
+    width: 10%;
+    border-radius: 8px;
+    font-size: small;
+}
+
+#email {
+    width: 30%;
+    background-color: #f2f2f2;
+    border: 0;
+    border-radius: 5px;
+    height: 45px;
+}
+
+input {
+    font-size: small;
+    padding-left: 20px;
+}
+
+footer {
+    background-color: #f2f2f2;
+    margin-bottom: 0;
+}
+
+.socialsFoot {
+    padding-top: 5%;
+    text-align: center;
+}
+
+.socialsFoot i {
+    margin-left: 1%;
+    margin-bottom: 2%;
+}
+
+.copyright {
+    background-color: #545454;
+    width: 100%;
+    border-bottom: #545454;
+    height: 50px;
+}
+
+.footer-container {
+    margin-top: 10%;
+    margin-bottom: 0;
+    background-color: #f2f2f2;
+}
+
+a {
+    text-decoration: none;
+}
+
+.imgInside {
+    height: 300px;
+    width: 300px;
+    border-radius: 70%;
+    border: 2px solid rgb(107, 42, 0);
+    margin-top: 2%;
+    position: relative;
+    overflow: hidden;
+    align-self: center;
+    right: 5px;
+    background-color: #f2f2f2;
+}
+
+.imgInside img {
+    position: absolute;
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    left: -15px;
+}
+
+.project1,
+project2,
+project3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.project-img {
+    width: 350px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-name {
+    font-weight: 550;
+}
+
+.about p {
+    margin-top: 5%;
+}
+
+.mobileHeader {
+    display: none;
+}
+
+header>p {
+    color: #ff8233;
+}
+
+/* Mobile Responsiveness */
+@media only screen and (max-width: 576px) {
+
+    .headerDiv {
+        display: none;
+    }
+
+    .mobileHeader {
+        display: block;
+        background-color: #ff8233;
+        width: 100%;
+        height: 60px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .summary-para {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .myself-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .socials {
+        margin-left: 0;
+        margin-top: 5%;
+        width: 100%;
+        margin-left: 50%;
+    }
+
+    .socials i {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+
+    .about-container {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .about {
+        margin-left: 0;
+        width: 90%;
+    }
+
+    .service-container h1,
+    .project-container h1,
+    .contact-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .service-container p,
+    .project-container p,
+    .contact-container p {
+        font-size: 0.9rem;
+        margin-left: 10%;
+        text-align: center;
+        width: 80%;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-container {
+        margin-top: 8%;
+    }
+
+    .card {
+        width: 80%;
+        margin: 10px 0;
+    }
+
+    .card svg {
+        height: 40px;
+        width: 40px;
+        margin-top: 5%;
+    }
+
+    .project-container {
+        margin-top: 30px;
+    }
+
+    .project-img {
+        width: 80%;
+        height: auto;
+    }
+
+    .project-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-name {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .email {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cv {
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    .name {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .developer {
+        width: 60%;
+    }
+
+    .hire {
+        width: 70%;
+        height: 35px;
+        font-size: smaller;
+        margin: 10px auto;
+        margin-top: 5%;
+    }
+
+    .contact {
+        height: 45px;
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    #email {
+        width: 80%;
+    }
+
+    input {
+        font-size: small;
+        padding-left: 10px;
+    }
+
+    footer {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .socialsFoot i {
+        font-size: 1.5rem;
+        margin: 5px;
+    }
+
+    .copyright {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .footer-container {
+        padding: 20px;
+    }
+
+    .imgInside {
+        width: 200px;
+        height: 200px;
+        margin-top: 20px;
+        right: 25px;
+    }
+
+    .imgInside img {
+        left: -10px;
+    }
+
+    .hi {
+        margin-right: 50%;
+    }
+
+    .intro h1 {
+        margin-right: 28%;
+        font-size: 40px;
+    }
+
+    .developer {
+        margin-left: 32%;
+    }
+
+    .hire {
+        width: 30%;
+    }
+
+    .img-socials {
+        margin-left: 12%;
+    }
+
+    .project2 .project-img {
+        margin-left: 10%;
+    }
+
+    .project3 .project-img {
+        margin-left: 10%;
+    }
+
+    .project1 .project-img {
+        margin-left: 10%;
+    }
+
+    .contact {
+        width: 30%;
+    }
+
+    .navDiv ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0;
+    }
+
+    .navDiv li {
+        margin: 0;
+        font-size: small;
+    }
+
+    header>p {
+        margin-top: 3%;
+    }
+
+    .about h1 {
+        text-align: center;
+    }
+
+    .project1 h6 {
+        margin-top: 10%;
+    }
+
+}
+
+@media only screen and (min-width: 1290px) {
+    .imgInside {
+        right: 20px;
+    }
+
+    header {
+        gap: 10%;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .imgInside {
+        right: 30px;
+    }
+
+    header {
+        gap: 15%;
+    }
+}
