@@ -1,0 +1,144 @@
+.contactContainer {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 2rem;
+    margin-top: 2%;
+}
+
+.contactContent {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+.contactText {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #333;
+    max-width: 600px;
+    margin: 1.5rem auto;
+    margin-bottom: 5%;
+}
+
+.contactFormGroup {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactInput {
+    padding: 12px;
+    width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.contactInput::placeholder {
+    font-size: 1rem;
+    color: #999;
+}
+
+.contactButton {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: 50px;
+    width: 150px;
+}
+
+.contactButton:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Dark Mode Styles */
+body.dark-mode .contactText {
+    color: #ffffff;
+}
+
+body.dark-mode .contactInput {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border-color: #333;
+}
+
+body.dark-mode .contactInput::placeholder {
+    color: #888;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contactContainer {
+        min-height: 40vh;
+        padding: 1.5rem 1rem;
+    }
+
+    .contactText {
+        font-size: 1rem;
+        margin: 1rem auto;
+    }
+
+    .contactFormGroup {
+        margin-top: 1.5rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .contactInput {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .contactContainer {
+        min-height: 35vh;
+        padding: 1rem;
+    }
+
+    .contactText {
+        font-size: 0.9rem;
+    }
+
+    .contactInput {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .contactButton {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .contactContainer {
+        min-height: 30vh;
+    }
+
+    .contactText {
+        font-size: 0.8rem;
+    }
+
+    .contactInput {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    .contactButton {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+}

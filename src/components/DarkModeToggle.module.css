@@ -1,0 +1,35 @@
+.toggleButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.8rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+.toggleButton:hover {
+    transform: scale(1.1);
+    color: var(--primary-color);
+}
+
+.toggleButton.dark {
+    color: #ffd700;
+}
+
+.toggleButton.dark:hover {
+    color: #ffed4a;
+}
+
+/* Dark Mode Styles */
+body.dark-mode .toggleButton {
+    color: #ffffff;
+}
+
+body.dark-mode .toggleButton:hover {
+    color: #ffd700;
+}

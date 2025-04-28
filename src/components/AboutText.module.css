@@ -1,0 +1,15 @@
+.about-text-container p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    width: 78%;
+    margin-left: 12.5%;
+    margin-top: 2%;
+    height: auto;
+}
+
+.about-text-container h1 {
+    font-weight: bold;
+    font-size: 3rem;
+    margin-left: 12.5%;
+
+}

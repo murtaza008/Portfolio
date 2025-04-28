@@ -1,0 +1,14 @@
+.about-image-container {
+    width: 50%;
+    margin-left: 10%;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.about-image-container img {
+    width: 55%;
+    height: 55%;
+    object-fit: contain;
+}

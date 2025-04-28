@@ -1,0 +1,25 @@
+.social-links-container a {
+    font-size: 2rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.social-links-container a:hover {
+    color: #1a73e8;
+}
+
+.social-links-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Dark Mode Styles */
+:global(body.dark-mode) .social-links-container a {
+    color: #ffffff !important;
+}
+
+:global(body.dark-mode) .social-links-container a:hover {
+    color: #1a73e8 !important;
+}

@@ -1,0 +1,36 @@
+import React from 'react';
+import style from './FrontendProjects.module.css';
+import frontend1 from '../frontend1.png';
+import frontend2 from '../frontend2.png';
+import frontend3 from '../frontend3.png';
+
+const projects = [
+    {
+        title: 'Todo-Master',
+        image: frontend1,
+        link: 'https://murtaza008.github.io/todo-react-app/'
+    },
+    {
+        title: 'Shopping List',
+        image: frontend2,
+        link: 'https://murtaza008.github.io/Shopping-List/'
+    },
+    {
+        title: 'Simple Calculator',
+        image: frontend3,
+        link: 'https://murtaza008.github.io/calculator-react-app/'
+    },
+];
+
+const FrontendProjects = () => (
+    <div className={style['projects-row']}>
+        {projects.map((project, idx) => (
+            <a key={idx} href={project.link} target="_blank" rel="noopener noreferrer" className={style['project-card']}>
+                <img src={project.image} alt={project.title} />
+                <h3>{project.title}</h3>
+            </a>
+        ))}
+    </div>
+);
+
+export default FrontendProjects; 

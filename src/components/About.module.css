@@ -1,0 +1,25 @@
+.about-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding-bottom: 2%;
+}
+
+/* Dark Mode Styles */
+:global(body.dark-mode) .about-container {
+    background-color: #121212;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 3rem 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-container {
+        padding: 2rem 0;
+    }
+}

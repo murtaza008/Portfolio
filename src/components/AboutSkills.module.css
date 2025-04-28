@@ -1,0 +1,101 @@
+.skill-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    margin: 8px 0;
+}
+
+.skill-level {
+    height: 10px;
+    border-radius: 20px;
+    text-align: right;
+    padding-right: 5px;
+    color: white;
+    line-height: 20px;
+}
+
+.skill-level.javascript {
+    width: 90%;
+    background-color: #1a73e8;
+}
+
+.skill-level.react {
+    width: 85%;
+    background-color: #1a73e8;
+}
+
+.skill-level.php {
+    width: 80%;
+    background-color: #1a73e8;
+}
+
+.skill-level.database {
+    width: 90%;
+    background-color: #1a73e8;
+}
+
+.skill-level.html {
+    width: 95%;
+    background-color: #1a73e8;
+}
+
+.skill-level.css {
+    width: 92%;
+    background-color: #1a73e8;
+}
+
+.skill-level.python {
+    width: 60%;
+    background-color: #1a73e8;
+}
+
+.skill-level.c {
+    width: 90%;
+    background-color: #1a73e8;
+}
+
+.about-skills-container {
+    width: 70%;
+    margin-left: 12.5%;
+    margin-top: 5%;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-item {
+    margin-bottom: 1.5rem;
+}
+
+.skill-name {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.skill-bar {
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    border-radius: 4px;
+}
+
+/* Dark Mode Styles */
+:global(body.dark-mode) .skill-name {
+    color: #f0f0f0;
+}
+
+:global(body.dark-mode) .skill-bar {
+    background-color: #333;
+}

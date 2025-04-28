@@ -1,0 +1,29 @@
+.summary-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 6%;
+}
+
+.summary-container p {
+    width: 80%;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #333;
+}
+
+.summary-container p:first-child {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+/* Dark Mode Styles */
+body.dark-mode .greeting,
+body.dark-mode .description {
+    color: #ffffff;
+}

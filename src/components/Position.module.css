@@ -1,0 +1,14 @@
+.change-color {
+    color: #1a73e8;
+    font-weight: 750;
+    font-size: 3rem;
+    width: 100%;
+}
+
+.developer {
+    margin-left: 20%;
+}
+
+:global(body.dark-mode) .change-color {
+    color: #1a73e8 !important;
+}

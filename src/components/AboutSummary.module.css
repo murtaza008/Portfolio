@@ -1,0 +1,7 @@
+.about-summary {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-right: 5%;
+    justify-content: center;
+}
