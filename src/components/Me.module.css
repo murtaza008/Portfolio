@@ -8,3 +8,30 @@
     align-items: center;
     margin-left: 5%;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .me-container {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .me-container img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .me-container {
+        margin-top: 1rem;
+        padding-top: 0;
+    }
+
+    .me-container img {
+        max-width: 90%;
+    }
+}

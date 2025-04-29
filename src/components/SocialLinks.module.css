@@ -23,3 +23,34 @@
 :global(body.dark-mode) .social-links-container a:hover {
     color: #1a73e8 !important;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .social-links-container {
+        margin-top: 1.5rem;
+    }
+
+    .social-links-container a {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-links-container {
+        margin-top: 1rem;
+    }
+
+    .social-links-container a {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .social-links-container {
+        margin-top: 0.8rem;
+    }
+
+    .social-links-container a {
+        font-size: 1.2rem;
+    }
+}

@@ -298,6 +298,23 @@ body.dark-mode .project-header p {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 1rem;
+        overflow-x: hidden;
+    }
+
+    section {
+        width: 100%;
+        overflow-x: hidden;
+        padding: 1rem 0;
+    }
+
     h1 {
         font-size: 2rem;
     }
@@ -322,39 +339,44 @@ body.dark-mode .project-header p {
         font-size: 1rem;
     }
 
-    .container {
-        padding: 0 15px;
-    }
-
-    section {
-        padding: 40px 0;
-    }
-
     .myself-container {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        margin-top: 1rem;
     }
 
     .about-container {
         flex-direction: column;
         align-items: center;
+        margin-top: 1rem;
     }
 
     .service-container {
-        padding: 1rem;
+        padding: 0.5rem;
+        margin-top: 1rem;
     }
 
     .project-container {
-        padding: 1rem;
+        padding: 0.5rem;
+        margin-top: 1rem;
     }
 
     .contactContainer {
-        padding: 1rem;
+        padding: 0.5rem;
+        margin-top: 1rem;
     }
 }
 
 @media (max-width: 576px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        padding: 0 0.5rem;
+    }
+
     h1 {
         font-size: 1.75rem;
     }
@@ -379,32 +401,24 @@ body.dark-mode .project-header p {
         font-size: 0.9rem;
     }
 
-    .container {
-        padding: 0 10px;
-    }
-
-    section {
-        padding: 30px 0;
-    }
-
     .myself-container {
-        margin-top: 5%;
+        margin-top: 0.5rem;
     }
 
     .about-container {
-        margin-top: 10%;
+        margin-top: 0.5rem;
     }
 
     .service-container {
-        margin-top: 10%;
+        margin-top: 0.5rem;
     }
 
     .project-container {
-        margin-top: 10%;
+        margin-top: 0.5rem;
     }
 
     .contactContainer {
-        margin-top: 10%;
+        margin-top: 0.5rem;
     }
 
     .summary-para {
@@ -413,11 +427,11 @@ body.dark-mode .project-header p {
     }
 
     .img-socials {
-        margin-top: 5%;
+        margin-top: 0.5rem;
     }
 
     .socials {
-        margin-top: 5%;
+        margin-top: 0.5rem;
     }
 
     .about {
@@ -487,5 +501,9 @@ body.dark-mode .project-header p {
 
     .copyright {
         font-size: 0.8rem;
+    }
+
+    section {
+        padding: 0.5rem 0;
     }
 }

@@ -1,23 +1,23 @@
 .image-background-container {
-    height: 65%;
-    width: 60%;
+    width: 55%;
     border-radius: 50%;
     border: #1a73e8 1px solid;
     position: relative;
     overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    margin-top: 5%;
+    justify-content: center;
+    height: 45vh;
+    margin-top: 12%;
 }
 
 .profile-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 0% 0%;
+    object-position: 10% 20%;
     display: block;
-    transform: translate(-5%, 0%);
+    transform: translateX(-5%);
 }
 
 :global(body.dark-mode) .image-background-container {
@@ -56,4 +56,12 @@ body.dark-mode .image-container {
 :global(body.dark-mode) .theme-toggle {
     background: #fff;
     color: #1a73e8;
+}
+
+@media (max-width: 768px) {
+    .image-background-container {
+        height: 35vh;
+        margin-top: 0;
+        padding-top: 0;
+    }
 }

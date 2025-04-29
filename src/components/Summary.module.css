@@ -22,8 +22,75 @@
     margin-bottom: 0.5rem;
 }
 
+.description {
+    margin: 1.5rem 0;
+}
+
 /* Dark Mode Styles */
 body.dark-mode .greeting,
 body.dark-mode .description {
     color: #ffffff;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .summary-container {
+        width: 100%;
+        margin-top: 2%;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 0;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    .summary-container p {
+        width: 100%;
+        max-width: 600px;
+        font-size: 1rem;
+    }
+
+    .summary-container p:first-child {
+        font-size: 1.2rem;
+    }
+
+    .description {
+        margin: 0.8rem 0;
+        padding: 0;
+    }
+
+    .summary-container button {
+        width: 200px !important;
+        margin: 0.5rem auto !important;
+    }
+
+    .greeting {
+        margin-right: 40%;
+        margin-bottom: 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .summary-container {
+        margin-top: 1%;
+        padding: 0 0.5rem;
+    }
+
+    .summary-container p {
+        font-size: 0.95rem;
+    }
+
+    .summary-container p:first-child {
+        font-size: 1.1rem;
+    }
+
+    .description {
+        margin: 0.5rem 0;
+        padding: 0;
+    }
+
+    .summary-container button {
+        width: 180px !important;
+        margin: 0.3rem auto !important;
+    }
 }

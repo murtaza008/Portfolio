@@ -4,11 +4,14 @@ import Main from './components/Main'
 import Footer from './components/Footer'
 import ThemeToggle from './components/ThemeToggle'
 import { DarkModeProvider } from './context/DarkModeContext'
+import { useIsMobile } from './utils/deviceUtils'
 
 function App() {
+    const isMobile = useIsMobile();
+
     return (
         <DarkModeProvider>
-            <div style={{ paddingTop: '100px' }}>
+            <div style={{ paddingTop: isMobile ? '0' : '100px' }}>
                 <Header />
                 <Main />
                 <Footer />

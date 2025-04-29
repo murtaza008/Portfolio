@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
+import { useIsMobile } from '../utils/deviceUtils';
 
 const AnimatedDesignTogether = () => {
     const el = useRef(null);
+    const isMobile = useIsMobile();
 
     useEffect(() => {
         const typed = new Typed(el.current, {
@@ -22,8 +24,24 @@ const AnimatedDesignTogether = () => {
     }, []);
 
     return (
-        <h1 style={{ marginBottom: '8%' }}>
-            <span style={{ fontWeight: 'bold', fontSize: '3rem', }} ref={el} />
+        <h1 style={{
+            marginBottom: isMobile ? '4%' : '8%',
+            textAlign: 'center',
+            width: '100%',
+            height: isMobile ? '2.5rem' : '3.5rem',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+        }}>
+            <span
+                style={{
+                    fontWeight: 'bold',
+                    fontSize: isMobile ? '2rem' : '3rem',
+                    display: 'inline-block',
+                    minHeight: isMobile ? '2rem' : '3rem'
+                }}
+                ref={el}
+            />
         </h1>
     );
 };

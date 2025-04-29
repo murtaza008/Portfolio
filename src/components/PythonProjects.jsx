@@ -1,17 +1,8 @@
 import React from 'react';
+import { useIsMobile } from '../utils/deviceUtils';
 import style from './PythonProjects.module.css';
-
 const projects = [
-    {
-        title: 'Data Analysis Tool',
-        image: 'your-image-url-6.jpg',
-        link: 'https://data-analysis-tool-example.com'
-    },
-    {
-        title: 'Automation Script',
-        image: 'your-image-url-7.jpg',
-        link: 'https://automation-script-example.com'
-    },
+
 ];
 
 const PythonProjects = () => (
@@ -24,5 +15,6 @@ const PythonProjects = () => (
         ))}
     </div>
 );
+
 
 export default PythonProjects; 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { motion } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import styles from './Cards.module.css'
 import { FaReact } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa";
@@ -82,24 +82,32 @@ const Cards = () => {
             viewport={{ margin: "-100px" }}
             style={{ minHeight: "100vh" }}
         >
-            {cards.map((card, index) => (
-                <motion.div
-                    key={card.id}
-                    className="card"
-                    style={{ width: '20rem', height: '18rem', backgroundColor: '#f2f2f2', display: 'flex', flexDirection: 'column', padding: '1rem' }}
-                    variants={cardVariants}
-                    custom={index}
-                    whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-                >
-                    <div style={{ display: 'flex', alignItems: 'center', marginBottom: '0.5rem' }}>
-                        {getIcon(card.title)}
-                    </div>
-                    <div className="card-body" style={{ textAlign: 'left' }}>
-                        <h5 className="card-title" style={{ margin: '0', padding: '0', textAlign: 'left', float: 'left' }}>{card.title}</h5><br />
-                        <p className="card-text" style={{ paddingTop: '25px' }}>{card.description}</p>
-                    </div>
-                </motion.div>
-            ))}
+            {cards.map((card, index) => {
+                const ref = React.useRef(null);
+                const isInView = useInView(ref, { margin: "-100px" });
+
+                return (
+                    <motion.div
+                        key={card.id}
+                        ref={ref}
+                        className="card"
+                        style={{ width: '20rem', height: '18rem', backgroundColor: '#f2f2f2', display: 'flex', flexDirection: 'column', padding: '1rem' }}
+                        variants={cardVariants}
+                        custom={index}
+                        initial="hidden"
+                        animate={isInView ? "visible" : "hidden"}
+                        whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                    >
+                        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '0.5rem' }}>
+                            {getIcon(card.title)}
+                        </div>
+                        <div className="card-body" style={{ textAlign: 'left' }}>
+                            <h5 className="card-title" style={{ margin: '0', padding: '0', textAlign: 'left', float: 'left' }}>{card.title}</h5><br />
+                            <p className="card-text" style={{ paddingTop: '25px' }}>{card.description}</p>
+                        </div>
+                    </motion.div>
+                );
+            })}
         </motion.div>
     )
 }

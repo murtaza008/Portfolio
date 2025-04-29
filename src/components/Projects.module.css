@@ -144,12 +144,12 @@
 }
 
 .carousel-projects-row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .carousel-project-card {
@@ -157,11 +157,12 @@
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     overflow: hidden;
-    width: 100%;
+    width: 220px;
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: transform 0.2s;
+    margin: 0 auto;
 }
 
 .carousel-project-card:hover {
@@ -176,11 +177,10 @@
 }
 
 .carousel-project-card h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 600;
-    margin: 1rem 0;
+    margin: 1rem 0 1.5rem 0;
     text-align: center;
-    padding: 0 1rem;
 }
 
 /* Dark Mode Styles */
@@ -227,6 +227,7 @@
     .project-container {
         padding: 1rem;
         margin-top: 5%;
+        overflow-x: hidden;
     }
 
     .project-description {
@@ -263,16 +264,23 @@
         font-size: 1rem;
     }
 
+    .project-carousel-container {
+        padding: 0;
+        overflow: hidden;
+    }
+
     .carousel-arrow.left {
-        left: -40px;
+        left: 1rem;
     }
 
     .carousel-arrow.right {
-        right: -40px;
+        right: 1rem;
     }
 
-    .project-carousel-container {
-        min-height: 40vh;
+    .carousel-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
     }
 
     .carousel-title {
@@ -282,12 +290,19 @@
     .carousel-desc {
         font-size: 1rem;
     }
+
+    .carousel-projects-row {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        width: 100%;
+    }
 }
 
 @media (max-width: 576px) {
     .project-container {
         padding: 0.5rem;
-        margin-top: 10%;
     }
 
     .project-description {
@@ -341,7 +356,6 @@
     }
 
     .carousel-projects-row {
-        grid-template-columns: 1fr;
         gap: 1rem;
     }
 
@@ -358,17 +372,27 @@
         margin: 0.5rem 0 1rem 0;
     }
 
-    .carousel-arrow {
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
-    }
-
     .carousel-arrow.left {
-        left: -20px;
+        left: 0.5rem;
     }
 
     .carousel-arrow.right {
-        right: -20px;
+        right: 0.5rem;
+    }
+
+    .carousel-arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-projects-row {
+        gap: 1rem;
+    }
+
+    .carousel-project-card {
+        width: 200px;
     }
 }

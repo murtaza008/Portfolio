@@ -1,19 +1,19 @@
 import React from 'react';
+import { useIsMobile } from '../utils/deviceUtils';
 import style from './FrontendProjects.module.css';
 import frontend1 from '../frontend1.png';
 import frontend2 from '../frontend2.png';
 import frontend3 from '../frontend3.png';
-
 const projects = [
-    {
-        title: 'Todo-Master',
-        image: frontend1,
-        link: 'https://murtaza008.github.io/todo-react-app/'
-    },
     {
         title: 'Shopping List',
         image: frontend2,
         link: 'https://murtaza008.github.io/Shopping-List/'
+    },
+    {
+        title: 'ToDo Master',
+        image: frontend1,
+        link: 'https://murtaza008.github.io/todo-react-app/'
     },
     {
         title: 'Simple Calculator',
@@ -32,5 +32,6 @@ const FrontendProjects = () => (
         ))}
     </div>
 );
+
 
 export default FrontendProjects; 

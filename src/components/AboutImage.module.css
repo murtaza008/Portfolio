@@ -11,4 +11,34 @@
     width: 55%;
     height: 55%;
     object-fit: contain;
+    margin-top: 8%;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .about-image-container {
+        width: 70%;
+        margin-left: 0;
+        height: auto;
+        justify-content: center;
+        margin-top: 2rem;
+        margin-bottom: 0;
+    }
+
+    .about-image-container img {
+        width: 80%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-image-container {
+        margin-top: 1.5rem;
+        margin-bottom: 0;
+
+    }
+
+    .about-image-container img {
+        width: 90%;
+    }
 }

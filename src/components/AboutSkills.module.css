@@ -2,7 +2,6 @@
     width: 100%;
     background-color: #e0e0e0;
     border-radius: 20px;
-    margin: 8px 0;
 }
 
 .skill-level {
@@ -15,49 +14,57 @@
 }
 
 .skill-level.javascript {
-    width: 90%;
+    --skill-width: 90%;
+    width: var(--skill-width);
     background-color: #1a73e8;
 }
 
 .skill-level.react {
-    width: 85%;
+    --skill-width: 85%;
+    width: var(--skill-width);
     background-color: #1a73e8;
 }
 
 .skill-level.php {
-    width: 80%;
+    --skill-width: 80%;
+    width: var(--skill-width);
     background-color: #1a73e8;
 }
 
 .skill-level.database {
-    width: 90%;
+    --skill-width: 90%;
+    width: var(--skill-width);
     background-color: #1a73e8;
 }
 
 .skill-level.html {
-    width: 95%;
+    --skill-width: 95%;
+    width: var(--skill-width);
     background-color: #1a73e8;
 }
 
 .skill-level.css {
-    width: 92%;
+    --skill-width: 92%;
+    width: var(--skill-width);
     background-color: #1a73e8;
 }
 
 .skill-level.python {
-    width: 60%;
+    --skill-width: 60%;
+    width: var(--skill-width);
     background-color: #1a73e8;
 }
 
 .skill-level.c {
-    width: 90%;
+    --skill-width: 90%;
+    width: var(--skill-width);
     background-color: #1a73e8;
 }
 
 .about-skills-container {
     width: 70%;
     margin-left: 12.5%;
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 .skills-grid {
@@ -74,7 +81,8 @@
 }
 
 .skill-name {
-    font-weight: 500;
+    font-weight: 700;
+    font-size: 1.1rem;
     margin-bottom: 0.5rem;
     color: #333;
 }
@@ -98,4 +106,59 @@
 
 :global(body.dark-mode) .skill-bar {
     background-color: #333;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .about-skills-container {
+        width: 95%;
+        margin-left: -5%;
+    }
+
+    .skills-grid {
+        gap: 3rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .skill-level.javascript,
+    .skill-level.react,
+    .skill-level.php,
+    .skill-level.database,
+    .skill-level.html,
+    .skill-level.css,
+    .skill-level.python,
+    .skill-level.c {
+        width: 75%;
+    }
+
+    .skill-name {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-skills-container {
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    .skills-grid {
+        column-gap: 2rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .skill-level.javascript,
+    .skill-level.react,
+    .skill-level.php,
+    .skill-level.database,
+    .skill-level.html,
+    .skill-level.css,
+    .skill-level.python,
+    .skill-level.c {
+        width: 70%;
+    }
+
+    .skill-name {
+        font-size: 0.8rem;
+    }
 }

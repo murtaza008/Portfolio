@@ -1,5 +1,5 @@
 import React from 'react'
-import { motion } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import style from './AboutSkills.module.css'
 
 const AboutSkills = () => {
@@ -14,43 +14,47 @@ const AboutSkills = () => {
         { name: 'PHP', className: 'php' }
     ]
 
-    const containerVariants = {
-        hidden: { opacity: 0 },
+    const itemVariants = {
+        hidden: { opacity: 0, y: 20 },
         visible: {
             opacity: 1,
+            y: 0,
             transition: {
-                staggerChildren: 0.05
+                duration: 0.2,
+                ease: "easeOut"
             }
         }
     }
 
-    const itemVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0 }
-    }
-
     return (
-        <motion.div
-            className={style['about-skills-container']}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ margin: "-100px" }}
-            variants={containerVariants}
-        >
-            <motion.ul className={style['skills-grid']}>
-                {skills.map((skill, index) => (
-                    <motion.li
-                        key={index}
-                        variants={itemVariants}
-                    >
-                        <h6 style={{ fontWeight: '700', fontSize: '1.1rem' }}>{skill.name}</h6>
-                        <div className={style["skill-bar"]}>
-                            <div className={`${style["skill-level"]} ${style[skill.className]}`}></div>
-                        </div>
-                    </motion.li>
-                ))}
-            </motion.ul>
-        </motion.div>
+        <div className={style['about-skills-container']}>
+            <ul className={style['skills-grid']}>
+                {skills.map((skill, index) => {
+                    const ref = React.useRef(null);
+                    const isInView = useInView(ref, { margin: "-100px" });
+
+                    return (
+                        <motion.li
+                            key={index}
+                            ref={ref}
+                            initial="hidden"
+                            animate={isInView ? "visible" : "hidden"}
+                            variants={itemVariants}
+                        >
+                            <h6 className={style['skill-name']}>{skill.name}</h6>
+                            <div className={style["skill-bar"]}>
+                                <motion.div
+                                    className={`${style["skill-level"]} ${style[skill.className]}`}
+                                    initial={{ width: 0 }}
+                                    animate={isInView ? { width: "var(--skill-width)" } : { width: 0 }}
+                                    transition={{ duration: 0.4, ease: "easeOut" }}
+                                ></motion.div>
+                            </div>
+                        </motion.li>
+                    );
+                })}
+            </ul>
+        </div>
     )
 }
 
