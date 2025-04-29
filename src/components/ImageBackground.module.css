@@ -60,8 +60,22 @@ body.dark-mode .image-container {
 
 @media (max-width: 768px) {
     .image-background-container {
-        height: 35vh;
+        height: 30vh;
         margin-top: 0;
         padding-top: 0;
+    }
+
+    .profile-image {
+        padding-top: 10%;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-background-container {
+        height: 30vh;
+    }
+
+    .profile-image {
+        padding-top: 10%;
     }
 }

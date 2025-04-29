@@ -4,3 +4,17 @@
     color: #1a73e8 !important;
     height: 100%;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .name-container {
+        margin-left: 5%;
+        color: #1a73e8 !important;
+    }
+
+    /* Ensure consistent color in dark mode */
+    :global(body.dark-mode) .name-container,
+    :global(body.dark-mode) .name-container span {
+        color: #1a73e8 !important;
+    }
+}

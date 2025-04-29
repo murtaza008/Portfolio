@@ -1,12 +1,8 @@
 export const downloadCV = () => {
-    // Replace this URL with your actual CV PDF file URL
-    const cvUrl = '/Murtaza_Mazhar_CV.pdf';
-
-    // Create a link element
     const link = document.createElement('a');
-    link.href = cvUrl;
-    link.download = 'Murtaza_Mazhar_CV.pdf'; // Name of the downloaded file
+    link.href = `${window.location.origin}/Portfolio/Murtaza_Mazhar_resume.pdf`; // Adjusted for subdirectory
+    link.download = 'Murtaza_Mazhar_resume.pdf'; // Desired filename for the download
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-}; 
+};

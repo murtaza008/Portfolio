@@ -137,23 +137,38 @@ body.dark-mode * {
     color: #ffffff !important;
 }
 
+body.dark-mode .card,
+body.dark-mode .nav-link,
+body.dark-mode .project-card,
+body.dark-mode .project-carousel-container,
+body.dark-mode .carousel-desc,
+body.dark-mode .contactInput,
+body.dark-mode .skill-bar,
+body.dark-mode .skill-level,
+body.dark-mode footer,
+body.dark-mode .dark-mode-toggle,
+body.dark-mode .position,
+body.dark-mode .position-text,
+body.dark-mode .social-links-container a,
+body.dark-mode .summary-container,
+body.dark-mode .service-container,
+body.dark-mode .about-container,
+body.dark-mode .contactContainer,
+body.dark-mode .carousel-arrow,
+body.dark-mode .project-content,
+body.dark-mode .project-description,
+body.dark-mode .project-header p {
+    color: #ffffff !important;
+}
+
 body.dark-mode .card {
     background-color: #1e1e1e !important;
     border-color: #333 !important;
 }
 
-body.dark-mode .nav-link {
-    color: #ffffff !important;
-}
-
 body.dark-mode .nav-link.active {
     background-color: #1a73e8 !important;
     color: #ffffff !important;
-}
-
-body.dark-mode .project-card {
-    background-color: #1e1e1e !important;
-    border-color: #333 !important;
 }
 
 body.dark-mode .project-carousel-container {
@@ -164,26 +179,8 @@ body.dark-mode .carousel-title {
     color: #1a73e8 !important;
 }
 
-body.dark-mode .carousel-desc {
-    color: #ffffff !important;
-}
-
-body.dark-mode .contactInput {
-    background-color: #1e1e1e !important;
-    color: #ffffff !important;
-    border-color: #333 !important;
-}
-
 body.dark-mode .contactInput::placeholder {
     color: #888 !important;
-}
-
-body.dark-mode .skill-bar {
-    background-color: #333 !important;
-}
-
-body.dark-mode .skill-level {
-    background-color: #1a73e8 !important;
 }
 
 body.dark-mode h1,
@@ -204,7 +201,6 @@ body.dark-mode a:hover {
 }
 
 body.dark-mode button {
-    background-color: #1a73e8 !important;
     color: #ffffff !important;
 }
 

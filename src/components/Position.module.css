@@ -20,7 +20,7 @@
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .position-container {
-        margin-left: -10%;
+        margin-left: -15%;
     }
 
     .change-color {
@@ -29,13 +29,13 @@
     }
 
     .developer {
-        margin-left: 40%;
+        margin-left: 45%;
     }
 }
 
 @media (max-width: 480px) {
     .position-container {
-        margin-left: -18%;
+        margin-left: -25%;
     }
 
     .change-color {
@@ -43,6 +43,6 @@
     }
 
     .developer {
-        margin-left: 20%;
+        margin-left: 25%;
     }
 }
