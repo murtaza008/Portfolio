@@ -79,3 +79,14 @@ body.dark-mode .image-container {
         padding-top: 10%;
     }
 }
+
+@media (max-width: 932px) and (orientation: landscape) {
+    .image-background-container {
+        width: 50%;
+        height: 45vh;
+    }
+
+    .profile-image {
+        padding-top: 10%;
+    }
+}

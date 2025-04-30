@@ -48,6 +48,12 @@ section {
     padding: 60px 0;
 }
 
+@media (max-width: 932px) and (orientation: landscape) {
+    section {
+        padding: 0;
+    }
+}
+
 h1,
 h2,
 h3,

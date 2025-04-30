@@ -84,25 +84,27 @@ const Navbar = () => {
                     marginLeft: '3%',
                     paddingLeft: '15%',
                     display: 'flex',
-                    gap: '15px'
+                    gap: '15px',
+                    flexWrap: 'nowrap',
+                    whiteSpace: 'nowrap'
                 }}>
                     <li className="nav-item">
-                        <a href="#home" className="nav-link" style={getLinkStyle('home')} onClick={handleNavClick('home')}>Home</a>
+                        <a href="#home" className="nav-link" style={{ ...getLinkStyle('home'), fontSize: window.innerWidth <= 768 && window.innerHeight < window.innerWidth ? '0.9rem' : '1rem' }} onClick={handleNavClick('home')}>Home</a>
                     </li>
                     <li className="nav-item">
-                        <a href="#about" className="nav-link" style={getLinkStyle('about')} onClick={handleNavClick('about')}>About Me</a>
+                        <a href="#about" className="nav-link" style={{ ...getLinkStyle('about'), fontSize: window.innerWidth <= 768 && window.innerHeight < window.innerWidth ? '0.9rem' : '1rem' }} onClick={handleNavClick('about')}>About Me</a>
                     </li>
                     <li className="nav-item">
-                        <a href="#services" className="nav-link" style={getLinkStyle('services')} onClick={handleNavClick('services')}>Services</a>
+                        <a href="#services" className="nav-link" style={{ ...getLinkStyle('services'), fontSize: window.innerWidth <= 768 && window.innerHeight < window.innerWidth ? '0.9rem' : '1rem' }} onClick={handleNavClick('services')}>Services</a>
                     </li>
                     <li className="nav-item">
-                        <a href="#projects" className="nav-link" style={getLinkStyle('projects')} onClick={handleNavClick('projects')}>Projects</a>
+                        <a href="#projects" className="nav-link" style={{ ...getLinkStyle('projects'), fontSize: window.innerWidth <= 768 && window.innerHeight < window.innerWidth ? '0.9rem' : '1rem' }} onClick={handleNavClick('projects')}>Projects</a>
                     </li>
                     <li className="nav-item">
-                        <a href="#contact" className="nav-link" style={getLinkStyle('contact')} onClick={handleNavClick('contact')}>Contact</a>
+                        <a href="#contact" className="nav-link" style={{ ...getLinkStyle('contact'), fontSize: window.innerWidth <= 768 && window.innerHeight < window.innerWidth ? '0.9rem' : '1rem' }} onClick={handleNavClick('contact')}>Contact</a>
                     </li>
                     <li className="nav-item">
-                        <a href="#" className="nav-link active" onClick={handleDownloadCV}>Download CV</a>
+                        <a href="#" className="nav-link active" style={{ fontSize: window.innerWidth <= 768 && window.innerHeight < window.innerWidth ? '0.9rem' : '1rem' }} onClick={handleDownloadCV}>Download CV</a>
                     </li>
                 </ul>
             )}

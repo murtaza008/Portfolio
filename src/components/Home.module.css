@@ -16,7 +16,7 @@
 }
 
 /* Mobile Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 768px) and (orientation: portrait) {
     .home-container {
         height: auto;
         min-height: 100vh;
@@ -36,6 +36,24 @@
         width: 100%;
         padding: 0 1rem;
         box-sizing: border-box;
+    }
+}
+
+@media (max-width: 932px) and (orientation: landscape) {
+    .home-container {
+        height: 75vh;
+        width: 80%;
+        margin-left: 15%;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        flex-direction: row;
+        padding: 0;
+        overflow-x: visible;
+    }
+
+    .home-content {
+        display: none;
     }
 }
 

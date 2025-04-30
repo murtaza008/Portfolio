@@ -162,3 +162,36 @@
         font-size: 0.8rem;
     }
 }
+
+@media (max-width: 932px) and (orientation: landscape) {
+    .about-skills-container {
+        width: 70%;
+        margin-left: 12.5%;
+        margin-top: 2%;
+    }
+
+    .skills-grid {
+        gap: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skill-name {
+        font-size: 0.8rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .skill-bar {
+        height: 6px;
+    }
+
+    .skill-level.javascript,
+    .skill-level.react,
+    .skill-level.php,
+    .skill-level.database,
+    .skill-level.html,
+    .skill-level.css,
+    .skill-level.python,
+    .skill-level.c {
+        width: 75%;
+    }
+}

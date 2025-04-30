@@ -72,3 +72,29 @@ body.dark-mode .about-text-container p {
         padding: 0;
     }
 }
+
+@media (max-width: 932px) and (orientation: landscape) {
+    .about-text-container {
+        width: 78%;
+        margin-left: 12.5%;
+        align-items: flex-start;
+        text-align: left;
+        margin-bottom: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .about-text-container h1 {
+        font-size: 1.2rem;
+        margin-left: 12.5%;
+    }
+
+    .about-text-container p {
+        width: 90%;
+        margin-left: 12.5%;
+        max-width: none;
+        font-size: 0.8rem;
+        margin-top: 2%;
+        padding: 0;
+    }
+}

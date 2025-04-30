@@ -53,3 +53,20 @@
         font-size: 2rem;
     }
 }
+
+@media (max-width: 932px) and (orientation: landscape) {
+    .service-container {
+        height: auto;
+        min-height: 100vh;
+        padding: 1rem 0;
+    }
+
+    .service-description {
+        width: 75%;
+        font-size: 0.9rem;
+    }
+
+    .service-container h1 {
+        font-size: 2rem;
+    }
+}

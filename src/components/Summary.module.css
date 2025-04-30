@@ -33,7 +33,7 @@ body.dark-mode .description {
 }
 
 /* Mobile Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 768px) and (orientation: portrait) {
     .summary-container {
         width: 100%;
         margin-top: 2%;
@@ -67,6 +67,50 @@ body.dark-mode .description {
     .greeting {
         margin-right: 40%;
         margin-bottom: 5%;
+    }
+}
+
+@media (max-width: 932px) and (orientation: landscape) {
+    .summary-container {
+        width: 50%;
+        align-items: flex-start;
+        text-align: left;
+        margin-bottom: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .summary-container p {
+        width: 100%;
+        max-width: none;
+        font-size: 0.8rem;
+    }
+
+    .summary-container p:first-child {
+        font-size: 0.8rem;
+    }
+
+    .description {
+        margin: 1.5rem 0;
+        padding: 0;
+    }
+
+    .summary-container button {
+        width: auto !important;
+        margin: 0 !important;
+    }
+
+    .greeting {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .summary-container h2 {
+        font-size: 1rem;
+    }
+
+    .summary-container h1 {
+        font-size: 1.2rem;
     }
 }
 

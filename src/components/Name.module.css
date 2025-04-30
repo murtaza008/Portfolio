@@ -3,6 +3,7 @@
     font-weight: 700;
     color: #1a73e8 !important;
     height: 100%;
+    white-space: nowrap;
 }
 
 /* Mobile Responsiveness */
@@ -16,5 +17,15 @@
     :global(body.dark-mode) .name-container,
     :global(body.dark-mode) .name-container span {
         color: #1a73e8 !important;
+    }
+}
+
+@media (max-width: 932px) and (orientation: landscape) {
+    .name-container {
+        margin-left: 10%;
+    }
+
+    .name-container span {
+        font-size: 2rem !important;
     }
 }

@@ -29,3 +29,9 @@
         margin-top: 0;
     }
 }
+
+@media (max-width: 932px) and (orientation: landscape) {
+    .about-container {
+        margin-top: 4rem;
+    }
+}

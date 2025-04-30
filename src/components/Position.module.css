@@ -18,7 +18,7 @@
 }
 
 /* Mobile Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 768px) and (orientation: portrait) {
     .position-container {
         margin-left: -15%;
     }
@@ -30,6 +30,12 @@
 
     .developer {
         margin-left: 45%;
+    }
+}
+
+@media (max-width: 932px) and (orientation: landscape) {
+    .position-container {
+        margin-bottom: -2rem;
     }
 }
 
