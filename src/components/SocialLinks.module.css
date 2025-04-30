@@ -54,3 +54,9 @@
         font-size: 1.2rem;
     }
 }
+
+@media (max-width: 932px) and (orientation: landscape) {
+    .social-links-container a {
+        font-size: 1.2rem;
+    }
+}

@@ -11,7 +11,7 @@ const projects = [
         link: 'https://murtaza008.github.io/Shopping-List/'
     },
     {
-        title: 'ToDo Master',
+        title: 'Todo Master',
         image: frontend1,
         link: 'https://murtaza008.github.io/todo-react-app/'
     },

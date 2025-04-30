@@ -65,13 +65,14 @@
         gap: 1.5rem;
         justify-content: center;
         margin-top: 3%;
-        padding: 0.5rem;
+        padding: 0.5rem 27%;
     }
 
     .card {
         width: 100%;
         max-width: 15rem;
         height: 15rem;
+        margin: 0 auto;
     }
 
     .card-title {

@@ -72,3 +72,18 @@
         width: 200px;
     }
 }
+
+@media (max-width: 932px) and (orientation: landscape) {
+    .project-card {
+        width: 140px;
+    }
+
+    .project-card img {
+        height: 120px;
+    }
+
+    .project-card h3 {
+        font-size: 0.9rem;
+        margin: 0.4rem 0 0.8rem 0;
+    }
+}

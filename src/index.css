@@ -509,3 +509,16 @@ body.dark-mode .project-header p {
         padding: 0.5rem 0;
     }
 }
+
+/* Mobile Landscape View (932px) */
+@media (max-width: 932px) and (orientation: landscape) {
+    .nav-pills {
+        margin-left: 0 !important;
+        padding-left: 10% !important;
+    }
+
+    .nav-link {
+        font-size: 0.8rem !important;
+        padding: 0.3rem 0.6rem !important;
+    }
+}

@@ -396,3 +396,23 @@
         width: 200px;
     }
 }
+
+@media (max-width: 932px) and (orientation: landscape) {
+    .carousel-project-card {
+        width: 180px;
+    }
+
+    .carousel-arrow.left {
+        left: 0.5rem;
+    }
+
+    .carousel-arrow.right {
+        right: 0.5rem;
+    }
+
+    .carousel-arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
