@@ -128,11 +128,8 @@ body.dark-mode .contactInput::placeholder {
     }
 
     .contactButton {
-        width: 40%;
-        height: 40px;
+        width: 30%;
         font-size: 0.9rem;
-        padding: 8px 16px;
-        min-width: 120px;
     }
 }
 
@@ -158,12 +155,8 @@ body.dark-mode .contactInput::placeholder {
     }
 
     .contactButton {
-        width: 50%;
-        max-width: 140px;
-        height: 35px;
+        width: 25%;
         font-size: 0.85rem;
-        padding: 6px 12px;
-        min-width: 100px;
     }
 }
 
@@ -187,12 +180,5 @@ body.dark-mode .contactInput::placeholder {
         font-size: 0.9rem;
     }
 
-    .contactButton {
-        width: 45%;
-        max-width: 120px;
-        height: 32px;
-        font-size: 0.8rem;
-        padding: 5px 10px;
-        min-width: 90px;
-    }
+
 }

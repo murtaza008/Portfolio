@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'
-import styles from './Navbar.module.css'
-import { downloadCV } from '../utils/downloadCV'
-import { useIsMobile } from '../utils/deviceUtils'
+import React, { useState, useEffect } from 'react';
+import styles from './Navbar.module.css';
+import { downloadCV } from '../utils/downloadCV';
+import { useIsMobile } from '../utils/deviceUtils';
 
 const Navbar = () => {
     const [activeSection, setActiveSection] = useState('home');
@@ -41,11 +41,7 @@ const Navbar = () => {
 
     const toggleSidebar = () => {
         setSidebarOpen(!sidebarOpen);
-        if (!sidebarOpen) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = 'auto';
-        }
+        document.body.style.overflow = !sidebarOpen ? 'hidden' : 'auto';
     };
 
     const closeSidebar = () => {
@@ -62,21 +58,21 @@ const Navbar = () => {
     const handleDownloadCV = (e) => {
         e.preventDefault();
         downloadCV();
-        if (isMobile) {
-            closeSidebar();
-        }
+        if (isMobile) closeSidebar();
     };
 
     return (
         <>
             {/* Mobile Menu Toggle */}
-            <button
-                className={styles.menuToggle}
-                onClick={toggleSidebar}
-                aria-label="Toggle menu"
-            >
-                <span className={`${styles.menuIcon} ${sidebarOpen ? styles.active : ''}`}></span>
-            </button>
+            {isMobile && (
+                <button
+                    className={styles.menuToggle}
+                    onClick={toggleSidebar}
+                    aria-label="Toggle menu"
+                >
+                    <span className={`${styles.menuIcon} ${sidebarOpen ? styles.active : ''}`}></span>
+                </button>
+            )}
 
             {/* Desktop Navigation */}
             {!isMobile && (
@@ -104,84 +100,49 @@ const Navbar = () => {
                         <a href="#contact" className="nav-link" style={getLinkStyle('contact')} onClick={handleNavClick('contact')}>Contact</a>
                     </li>
                     <li className="nav-item">
-                        <a href="#" className="nav-link active" style={{ fontSize: window.innerWidth <= 768 && window.innerHeight < window.innerWidth ? '0.9rem' : '1rem' }} onClick={handleDownloadCV}>Download CV</a>
+                        <a href="#" className="nav-link active" onClick={handleDownloadCV}>Download CV</a>
                     </li>
                 </ul>
             )}
 
             {/* Mobile Sidebar */}
-            <div className={`${styles.sidebar} ${sidebarOpen ? styles.open : ''}`}>
-                <div className={styles.sidebarHeader}>
-                    <h3>Menu</h3>
-                    <button
-                        className={styles.closeButton}
-                        onClick={closeSidebar}
-                        aria-label="Close menu"
-                    >×</button>
-                </div>
-                <ul className={styles.sidebarMenu}>
-                    <li>
-                        <a
-                            href="#home"
-                            className={activeSection === 'home' ? styles.active : ''}
-                            onClick={handleNavClick('home')}
-                        >
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#about"
-                            className={activeSection === 'about' ? styles.active : ''}
-                            onClick={handleNavClick('about')}
-                        >
-                            About Me
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#services"
-                            className={activeSection === 'services' ? styles.active : ''}
-                            onClick={handleNavClick('services')}
-                        >
-                            Services
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#projects"
-                            className={activeSection === 'projects' ? styles.active : ''}
-                            onClick={handleNavClick('projects')}
-                        >
-                            Projects
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#contact"
-                            className={activeSection === 'contact' ? styles.active : ''}
-                            onClick={handleNavClick('contact')}
-                        >
-                            Contact
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#"
-                            className={styles.active}
-                            onClick={handleDownloadCV}
-                        >
-                            Download CV
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div
-                className={`${styles.sidebarOverlay} ${sidebarOpen ? styles.visible : ''}`}
-                onClick={closeSidebar}
-            ></div>
+            {isMobile && (
+                <>
+                    <div className={`${styles.sidebar} ${sidebarOpen ? styles.open : ''}`}>
+                        <div className={styles.sidebarHeader}>
+                            <h3>Menu</h3>
+                            <button
+                                className={styles.closeButton}
+                                onClick={closeSidebar}
+                                aria-label="Close menu"
+                            >×</button>
+                        </div>
+                        <ul className={styles.sidebarMenu}>
+                            <li>
+                                <a href="#home" className={activeSection === 'home' ? styles.active : ''} onClick={handleNavClick('home')}>Home</a>
+                            </li>
+                            <li>
+                                <a href="#about" className={activeSection === 'about' ? styles.active : ''} onClick={handleNavClick('about')}>About Me</a>
+                            </li>
+                            <li>
+                                <a href="#services" className={activeSection === 'services' ? styles.active : ''} onClick={handleNavClick('services')}>Services</a>
+                            </li>
+                            <li>
+                                <a href="#projects" className={activeSection === 'projects' ? styles.active : ''} onClick={handleNavClick('projects')}>Projects</a>
+                            </li>
+                            <li>
+                                <a href="#contact" className={activeSection === 'contact' ? styles.active : ''} onClick={handleNavClick('contact')}>Contact</a>
+                            </li>
+                            <li>
+                                <a href="#" className={styles.active} onClick={handleDownloadCV}>Download CV</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className={`${styles.sidebarOverlay} ${sidebarOpen ? styles.visible : ''}`} onClick={closeSidebar}></div>
+                </>
+            )}
         </>
-    )
-}
+    );
+};
 
-export default Navbar
+export default Navbar;

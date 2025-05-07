@@ -56,7 +56,7 @@ const Projects = () => {
 
     const variants = {
         enter: (direction) => ({
-            x: direction > 0 ? (isMobile ? 50 : 100) : (isMobile ? -50 : -100),
+            x: direction > 0 ? (isMobile ? 30 : 50) : (isMobile ? -30 : -50),
             opacity: 0
         }),
         center: {
@@ -66,7 +66,7 @@ const Projects = () => {
         },
         exit: (direction) => ({
             zIndex: 0,
-            x: direction < 0 ? (isMobile ? 50 : 100) : (isMobile ? -50 : -100),
+            x: direction < 0 ? (isMobile ? 30 : 50) : (isMobile ? -30 : -50),
             opacity: 0
         })
     }
@@ -104,11 +104,11 @@ const Projects = () => {
                         transition={{
                             x: {
                                 type: "spring",
-                                stiffness: isMobile ? 300 : 500,
-                                damping: isMobile ? 15 : 20,
-                                mass: 0.4
+                                stiffness: isMobile ? 400 : 600,
+                                damping: isMobile ? 20 : 30,
+                                mass: 0.2
                             },
-                            opacity: { duration: 0.1 }
+                            opacity: { duration: 0.2 }
                         }}
                         className={style['project-content']}
                     >

@@ -6,11 +6,20 @@
     white-space: nowrap;
 }
 
+.name-text {
+    font-size: 1.5rem;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .name-container {
         margin-left: 5%;
         color: #1a73e8 !important;
+    }
+
+    .name-text {
+        font-size: 1.2rem !important;
+
     }
 
     /* Ensure consistent color in dark mode */
@@ -25,7 +34,7 @@
         margin-left: 10%;
     }
 
-    .name-container span {
+    .name-text {
         font-size: 1rem !important;
     }
 }

@@ -60,33 +60,26 @@ body.dark-mode .image-container {
 
 @media (max-width: 768px) {
     .image-background-container {
-        height: 30vh;
+        height: 23vh;
         margin-top: 0;
         padding-top: 0;
+        margin-bottom: 0;
     }
 
     .profile-image {
-        padding-top: 10%;
+        padding-top: 15%;
     }
 }
 
-@media (max-width: 480px) {
-    .image-background-container {
-        height: 30vh;
-    }
 
-    .profile-image {
-        padding-top: 10%;
-    }
-}
 
 @media (max-width: 932px) and (orientation: landscape) {
     .image-background-container {
         width: 50%;
-        height: 45vh;
+        height: 40vh;
     }
 
     .profile-image {
-        padding-top: 10%;
+        padding-top: 18%;
     }
 }

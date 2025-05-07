@@ -35,7 +35,8 @@ const Cards = () => {
         visible: {
             opacity: 1,
             transition: {
-                duration: 0.2
+                duration: 0.3,
+                ease: "easeOut"
             }
         }
     }
@@ -53,7 +54,8 @@ const Cards = () => {
             transition: {
                 type: "spring",
                 stiffness: 100,
-                damping: 10
+                damping: 10,
+                mass: 0.5
             }
         }
     }
@@ -96,7 +98,7 @@ const Cards = () => {
                         custom={index}
                         initial="hidden"
                         animate={isInView ? "visible" : "hidden"}
-                        whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                        whileHover={{ scale: 1.05, transition: { duration: 0.1 } }}
                     >
                         <div style={{ display: 'flex', alignItems: 'center', marginBottom: '0.5rem' }}>
                             {getIcon(card.title)}

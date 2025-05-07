@@ -246,65 +246,150 @@ body.dark-mode .sidebarHeader h3 {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-    .menuToggle {
-        display: block;
-        position: fixed;
-        top: 1rem;
-        right: 1rem;
+    /* Mobile Sidebar Styles */
+    @media (max-width: 768px) {
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            background-color: white;
+            z-index: 1001;
+            transition: left 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .sidebar.open {
+            left: 0;
+        }
+
+        .sidebarMenu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebarMenu a {
+            display: block;
+            padding: 1.5rem;
+            text-decoration: none;
+            background-color: transparent;
+            color: #000;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode .sidebarMenu a {
+            color: #fff;
+        }
+
+        .sidebarMenu a:hover,
+        .sidebarMenu a.active {
+            background-color: transparent;
+            color: var(--primary-color);
+        }
+
+        .sidebarHeader {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+
+        .sidebarHeader h3 {
+            font-size: 1.8rem;
+            margin: 0;
+            color: var(--primary-color);
+        }
+
+
+
+        .closeButton {
+            font-size: 2.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #666;
+        }
+
+
+        .menuToggle {
+            display: block;
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            z-index: 1002;
+        }
+
+        .menuIcon {
+            width: 25px;
+            height: 2px;
+            background-color: var(--text-color);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .menuIcon::before,
+        .menuIcon::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 2px;
+            background-color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+
+        .menuIcon::before {
+            top: -8px;
+        }
+
+        .menuIcon::after {
+            bottom: -8px;
+        }
+
+        .menuIcon.active {
+            transform: rotate(45deg);
+        }
+
+        .menuIcon.active::before {
+            transform: rotate(-90deg);
+            top: 0;
+        }
+
+        .menuIcon.active::after {
+            opacity: 0;
+        }
+
+
+        .sidebarOverlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .sidebarOverlay.visible {
+            opacity: 1;
+            visibility: visible;
+        }
     }
 
-    .nav {
-        display: none;
-    }
-
-    .sidebar {
-        width: 100%;
-    }
-
-    .sidebarMenu a {
-        padding: 1.5rem;
-        font-size: 1.3rem;
-    }
-
-    .sidebarHeader {
-        padding: 1.5rem;
-    }
-
-    .sidebarHeader h3 {
-        font-size: 1.8rem;
-    }
-
-    .closeButton {
-        font-size: 2.5rem;
-    }
-
-    /* Dark Mode Mobile Styles */
-    body.dark-mode .sidebar {
-        background-color: #1e1e1e !important;
-    }
-
-    body.dark-mode .sidebarMenu a {
-        color: #ffffff !important;
-    }
-
-    body.dark-mode .sidebarHeader h3 {
-        color: #ffffff !important;
-    }
-
-    body.dark-mode .closeButton {
-        color: #ffffff !important;
-    }
-
-    /* Ensure menu toggle button is white in dark mode */
-    body.dark-mode .menuToggle {
-        background-color: transparent !important;
-    }
-
-    body.dark-mode .menuIcon,
-    body.dark-mode .menuIcon::before,
-    body.dark-mode .menuIcon::after {
-        background-color: #ffffff !important;
-    }
 }
 
 /* Tablet Responsiveness */

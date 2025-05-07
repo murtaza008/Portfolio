@@ -13,7 +13,7 @@
     background-color: #f2f2f2;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.08s ease;
     overflow: hidden;
 }
 
@@ -56,6 +56,11 @@
         width: 100%;
         max-width: 18rem;
     }
+
+    .card {
+        transition: transform 0.08s ease-in-out;
+        /* Faster and smoother */
+    }
 }
 
 @media (max-width: 932px) and (orientation: landscape) {
@@ -73,6 +78,11 @@
         max-width: 15rem;
         height: 15rem;
         margin: 0 auto;
+    }
+
+    .card {
+        transition: transform 0.08s ease-in-out;
+        /* Faster and smoother */
     }
 
     .card-title {

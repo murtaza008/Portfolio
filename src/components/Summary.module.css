@@ -112,6 +112,10 @@ body.dark-mode .description {
     .summary-container h1 {
         font-size: 1.2rem;
     }
+
+    .summary-container button {
+        width: 100px !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -134,7 +138,7 @@ body.dark-mode .description {
     }
 
     .summary-container button {
-        width: 180px !important;
-        margin: 0.3rem auto !important;
+        width: 120px !important;
+        margin-top: 1rem !important;
     }
 }

@@ -47,7 +47,7 @@ const AboutSkills = () => {
                                     className={`${style["skill-level"]} ${style[skill.className]}`}
                                     initial={{ width: 0 }}
                                     animate={isInView ? { width: "var(--skill-width)" } : { width: 0 }}
-                                    transition={{ duration: 0.4, ease: "easeOut" }}
+                                    transition={{ duration: 0.2, ease: "easeOut" }}
                                 ></motion.div>
                             </div>
                         </motion.li>
