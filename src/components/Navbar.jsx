@@ -111,11 +111,6 @@ const Navbar = () => {
                     <div className={`${styles.sidebar} ${sidebarOpen ? styles.open : ''}`}>
                         <div className={styles.sidebarHeader}>
                             <h3>Menu</h3>
-                            <button
-                                className={styles.closeButton}
-                                onClick={closeSidebar}
-                                aria-label="Close menu"
-                            >×</button>
                         </div>
                         <ul className={styles.sidebarMenu}>
                             <li>

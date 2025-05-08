@@ -57,16 +57,21 @@
 @media (max-width: 932px) and (orientation: landscape) {
     .service-container {
         height: auto;
-        min-height: 100vh;
-        padding: 1rem 0;
+        min-height: auto;
+        max-height: 90vh;
+        padding: 0;
+        margin: 0;
+        overflow: visible;
     }
 
     .service-description {
         width: 75%;
         font-size: 0.9rem;
+        margin: 0.5rem auto;
     }
 
     .service-container h1 {
         font-size: 2rem;
+        margin: 0.3rem 0;
     }
 }

@@ -66,11 +66,16 @@
 
 .menuToggle {
     display: none;
-    background: none;
+    background: transparent;
     border: none;
     cursor: pointer;
     padding: 0.5rem;
     z-index: 1002;
+}
+
+.menuToggle:focus {
+    outline: none;
+    background: transparent;
 }
 
 .menuIcon {
@@ -101,16 +106,17 @@
 }
 
 .menuIcon.active {
-    transform: rotate(45deg);
+    background-color: transparent;
 }
 
 .menuIcon.active::before {
-    transform: rotate(-90deg);
+    transform: rotate(45deg);
     top: 0;
 }
 
 .menuIcon.active::after {
-    opacity: 0;
+    transform: rotate(-45deg);
+    bottom: 0;
 }
 
 /* Sidebar Styles */
@@ -216,32 +222,28 @@ body.dark-mode .navLink {
 body.dark-mode .menuIcon,
 body.dark-mode .menuIcon::before,
 body.dark-mode .menuIcon::after {
-    background-color: #ffffff;
+    background-color: var(--primary-color) !important;
 }
 
-/* Sidebar Dark Mode Styles */
-body.dark-mode .sidebar {
-    background-color: #1e1e1e !important;
-}
-
-body.dark-mode .sidebarHeader {
-    border-bottom: 1px solid #333;
-}
-
-body.dark-mode .sidebarMenu li {
-    border-bottom: 1px solid #333;
-}
-
-body.dark-mode .sidebarMenu a {
-    color: #ffffff !important;
-}
-
-body.dark-mode .closeButton {
-    color: #ffffff !important;
+/* Override global dark mode styles for sidebar */
+body.dark-mode .sidebar * {
+    color: var(--text-color) !important;
 }
 
 body.dark-mode .sidebarHeader h3 {
-    color: #ffffff !important;
+    color: var(--primary-color) !important;
+}
+
+body.dark-mode .sidebarMenu a {
+    color: var(--text-color) !important;
+}
+
+body.dark-mode .sidebarMenu a:hover {
+    color: var(--primary-color) !important;
+}
+
+body.dark-mode .sidebarMenu a.active {
+    color: white !important;
 }
 
 /* Mobile Responsiveness */
@@ -261,7 +263,6 @@ body.dark-mode .sidebarHeader h3 {
             flex-direction: column;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
         }
-
 
         .sidebar.open {
             left: 0;
@@ -303,14 +304,11 @@ body.dark-mode .sidebarHeader h3 {
             border-bottom: 1px solid #eee;
         }
 
-
         .sidebarHeader h3 {
             font-size: 1.8rem;
             margin: 0;
             color: var(--primary-color);
         }
-
-
 
         .closeButton {
             font-size: 2.5rem;
@@ -320,13 +318,12 @@ body.dark-mode .sidebarHeader h3 {
             color: #666;
         }
 
-
         .menuToggle {
             display: block;
             position: fixed;
             top: 1rem;
             right: 1rem;
-            background: none;
+            background: transparent;
             border: none;
             z-index: 1002;
         }
@@ -358,18 +355,33 @@ body.dark-mode .sidebarHeader h3 {
         }
 
         .menuIcon.active {
-            transform: rotate(45deg);
+            background-color: transparent;
         }
 
         .menuIcon.active::before {
-            transform: rotate(-90deg);
+            transform: rotate(45deg);
             top: 0;
         }
 
         .menuIcon.active::after {
-            opacity: 0;
+            transform: rotate(-45deg);
+            bottom: 0;
         }
 
+        body.dark-mode .menuIcon,
+        body.dark-mode .menuIcon::before,
+        body.dark-mode .menuIcon::after {
+            background-color: var(--primary-color) !important;
+        }
+
+        body.dark-mode .menuIcon.active {
+            background-color: transparent !important;
+        }
+
+        body.dark-mode .menuIcon.active::before,
+        body.dark-mode .menuIcon.active::after {
+            background-color: var(--primary-color) !important;
+        }
 
         .sidebarOverlay {
             position: fixed;
@@ -389,7 +401,6 @@ body.dark-mode .sidebarHeader h3 {
             visibility: visible;
         }
     }
-
 }
 
 /* Tablet Responsiveness */

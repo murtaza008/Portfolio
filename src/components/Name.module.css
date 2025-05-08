@@ -4,6 +4,8 @@
     color: #1a73e8 !important;
     height: 100%;
     white-space: nowrap;
+    font-style: italic !important;
+
 }
 
 .name-text {

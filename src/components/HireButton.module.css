@@ -19,3 +19,9 @@
         width: 50% !important;
     }
 }
+
+@media (max-width: 932px) and (orientation: landscape) {
+    .btn-size {
+        margin-top: 0 !important;
+    }
+}

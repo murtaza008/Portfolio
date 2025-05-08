@@ -15,6 +15,9 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.08s ease;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
 }
 
 .card:hover {
@@ -29,21 +32,29 @@
     background-color: #ddd;
 }
 
+.icon-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
 .card-body {
     padding: 1.5rem;
+    text-align: left;
 }
 
 .card-title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 1rem;
     color: #333;
 }
 
 .card-text {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     color: #666;
     line-height: 1.6;
+    padding-top: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -58,44 +69,69 @@
     }
 
     .card {
-        transition: transform 0.08s ease-in-out;
+        transition: transform 0.03s ease-in-out;
         /* Faster and smoother */
     }
 }
 
 @media (max-width: 932px) and (orientation: landscape) {
     .card-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
         justify-content: center;
-        margin-top: 3%;
-        padding: 0.5rem 27%;
+        margin-top: 2%;
+        padding: 0.5rem 2%;
+        flex-wrap: nowrap;
     }
 
     .card {
-        width: 100%;
-        max-width: 15rem;
-        height: 15rem;
-        margin: 0 auto;
-    }
-
-    .card {
-        transition: transform 0.08s ease-in-out;
-        /* Faster and smoother */
+        width: 10rem !important;
+        height: 12rem !important;
+        margin: 0;
+        padding: 0.4rem;
     }
 
     .card-title {
-        font-size: 1rem;
-        margin-bottom: 0.5rem;
+        font-size: 0.7rem;
+        margin-bottom: 0.2rem;
     }
 
     .card-text {
-        font-size: 0.8rem;
-        line-height: 1.4;
+        font-size: 0.6rem;
+        line-height: 1.2;
+        padding-top: 1rem;
     }
 
     .card-body {
-        padding: 1rem;
+        padding: 0.3rem;
     }
+
+    .icon-container {
+        margin-bottom: 0.2rem;
+    }
+}
+
+/* Dark Mode Styles */
+:global(body.dark-mode) .card {
+    background-color: #1e1e1e !important;
+    border: 1px solid #333 !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+:global(body.dark-mode) .card-title {
+    color: #ffffff !important;
+}
+
+:global(body.dark-mode) .card-text {
+    color: #cccccc !important;
+}
+
+:global(body.dark-mode) .card-img-top {
+    background-color: #333 !important;
+}
+
+:global(body.dark-mode) .card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4) !important;
+    border-color: #1a73e8 !important;
 }

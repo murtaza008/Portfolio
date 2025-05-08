@@ -60,7 +60,7 @@ body.dark-mode .image-container {
 
 @media (max-width: 768px) {
     .image-background-container {
-        height: 23vh;
+        height: 26vh;
         margin-top: 0;
         padding-top: 0;
         margin-bottom: 0;

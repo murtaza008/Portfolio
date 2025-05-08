@@ -92,20 +92,19 @@ const Cards = () => {
                     <motion.div
                         key={card.id}
                         ref={ref}
-                        className="card"
-                        style={{ width: '20rem', height: '18rem', backgroundColor: '#f2f2f2', display: 'flex', flexDirection: 'column', padding: '1rem' }}
+                        className={styles.card}
                         variants={cardVariants}
                         custom={index}
                         initial="hidden"
                         animate={isInView ? "visible" : "hidden"}
                         whileHover={{ scale: 1.05, transition: { duration: 0.1 } }}
                     >
-                        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '0.5rem' }}>
+                        <div className={styles['icon-container']}>
                             {getIcon(card.title)}
                         </div>
-                        <div className="card-body" style={{ textAlign: 'left' }}>
-                            <h5 className="card-title" style={{ margin: '0', padding: '0', textAlign: 'left', float: 'left' }}>{card.title}</h5><br />
-                            <p className="card-text" style={{ paddingTop: '25px' }}>{card.description}</p>
+                        <div className={styles['card-body']}>
+                            <h5 className={styles['card-title']}>{card.title}</h5>
+                            <p className={styles['card-text']}>{card.description}</p>
                         </div>
                     </motion.div>
                 );
