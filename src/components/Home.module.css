@@ -19,14 +19,14 @@
 @media (max-width: 768px) and (orientation: portrait) {
     .home-container {
         min-height: auto;
-        max-height: 70vh;
+        height: auto;
         width: 100%;
         margin: 0;
-        padding: 0;
+        padding: 2rem 0;
         flex-direction: column;
-        overflow-x: hidden;
+        overflow: visible;
         box-sizing: border-box;
-        gap: 0.5rem;
+        gap: 1.5rem;
     }
 
     .home-content {
@@ -50,7 +50,7 @@
         gap: 2rem;
         flex-direction: row;
         padding-bottom: 5%;
-        overflow-x: visible;
+        overflow: visible;
     }
 
     .home-content {
@@ -61,15 +61,15 @@
 @media (max-width: 480px) {
     .home-container {
         min-height: auto;
-        max-height: 75vh;
+        height: auto;
         width: 100%;
         margin: 0;
-        padding: 0;
+        padding: 1.5rem 0;
         flex-direction: column;
-        align-items: flex-start;
-        overflow: hidden;
+        align-items: center;
+        overflow: visible;
         box-sizing: border-box;
-        gap: 0.25rem;
+        gap: 1rem;
     }
 
     .home-content {
@@ -81,8 +81,6 @@
 
     .home-container>* {
         margin: 0;
-        /* Remove margins from all direct child elements */
         padding: 0;
-        /* Remove padding from all direct child elements */
     }
 }
