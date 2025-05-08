@@ -60,7 +60,7 @@ body.dark-mode .image-container {
 
 @media (max-width: 768px) {
     .image-background-container {
-        height: 26vh;
+        height: 28vh;
         margin-top: 0;
         padding-top: 0;
         margin-bottom: 0;
@@ -71,15 +71,24 @@ body.dark-mode .image-container {
     }
 }
 
-
-
 @media (max-width: 932px) and (orientation: landscape) {
     .image-background-container {
         width: 50%;
-        height: 40vh;
+        height: 45vh;
+        max-width: 480px;
     }
 
     .profile-image {
         padding-top: 18%;
+    }
+}
+
+/* Landscape mode scrolling fix */
+@media (max-width: 932px) and (orientation: landscape) {
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 100%;
+        position: relative;
     }
 }

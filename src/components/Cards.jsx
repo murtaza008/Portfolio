@@ -82,7 +82,6 @@ const Cards = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ margin: "-100px" }}
-            style={{ minHeight: "100vh" }}
         >
             {cards.map((card, index) => {
                 const ref = React.useRef(null);

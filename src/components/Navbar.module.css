@@ -414,3 +414,14 @@ body.dark-mode .sidebarMenu a.active {
         padding: 0.4rem 0.8rem;
     }
 }
+
+@media (max-width: 932px) and (orientation: landscape) {
+    .nav-link {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .nav-pills {
+        gap: 10px !important;
+    }
+}

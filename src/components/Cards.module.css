@@ -80,9 +80,11 @@
         flex-direction: row;
         gap: 1rem;
         justify-content: center;
-        margin-top: 2%;
+        margin-top: 1%;
         padding: 0.5rem 2%;
         flex-wrap: nowrap;
+        height: auto;
+        min-height: auto;
     }
 
     .card {
@@ -100,7 +102,7 @@
     .card-text {
         font-size: 0.6rem;
         line-height: 1.2;
-        padding-top: 1rem;
+        padding-top: 0.5rem;
     }
 
     .card-body {
