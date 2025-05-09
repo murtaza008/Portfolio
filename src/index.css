@@ -302,6 +302,9 @@ body.dark-mode .project-header p {
 @media (max-width: 768px) {
     body {
         font-size: 1rem;
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
     }
 
     .container {

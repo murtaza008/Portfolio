@@ -18,6 +18,7 @@
         margin-bottom: 0;
         padding: 2rem 0 0 0;
         margin-top: 0;
+        overflow-x: hidden;
     }
 }
 
