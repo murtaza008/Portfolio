@@ -23,7 +23,7 @@
 @media (max-width: 932px) and (orientation: landscape) {
     .btn-size {
         margin-top: 0 !important;
-        width: 20% !important;
+        width: 25% !important;
         font-size: 10px !important;
     }
 }

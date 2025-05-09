@@ -301,20 +301,15 @@ body.dark-mode .project-header p {
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     body {
-        overflow-x: hidden;
-        width: 100%;
+        font-size: 1rem;
     }
 
     .container {
-        width: 100%;
-        padding: 0 1rem;
-        overflow-x: hidden;
+        padding: 0 15px;
     }
 
     section {
-        width: 100%;
-        overflow-x: hidden;
-        padding: 1rem 0;
+        padding: 40px 0;
     }
 
     h1 {
@@ -343,40 +338,33 @@ body.dark-mode .project-header p {
 
     .myself-container {
         flex-direction: column;
-        align-items: center;
         text-align: center;
-        margin-top: 1rem;
     }
 
     .about-container {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 1rem;
+        padding: 20px;
     }
 
     .service-container {
-        padding: 0.5rem;
-        margin-top: 1rem;
+        padding: 20px;
     }
 
     .project-container {
-        padding: 0.5rem;
-        margin-top: 1rem;
+        padding: 20px;
     }
 
     .contactContainer {
-        padding: 0.5rem;
-        margin-top: 1rem;
+        padding: 20px;
     }
 }
 
 @media (max-width: 576px) {
     body {
-        overflow-x: hidden;
+        font-size: 0.9rem;
     }
 
     .container {
-        padding: 0 0.5rem;
+        padding: 0 10px;
     }
 
     h1 {
@@ -404,101 +392,91 @@ body.dark-mode .project-header p {
     }
 
     .myself-container {
-        margin-top: 0.5rem;
+        padding: 10px;
     }
 
     .about-container {
-        margin-top: 0.5rem;
+        padding: 15px;
     }
 
     .service-container {
-        margin-top: 0.5rem;
+        padding: 15px;
     }
 
     .project-container {
-        margin-top: 0.5rem;
+        padding: 15px;
     }
 
     .contactContainer {
-        margin-top: 0.5rem;
+        padding: 15px;
     }
 
     .summary-para {
-        width: 90%;
-        margin: 0 auto;
+        font-size: 0.9rem;
     }
 
     .img-socials {
-        margin-top: 0.5rem;
+        gap: 1rem;
     }
 
     .socials {
-        margin-top: 0.5rem;
+        gap: 1rem;
     }
 
     .about {
-        margin-left: 0;
-        width: 90%;
+        padding: 1rem;
     }
 
     .service-container p,
+    .about-container p,
     .project-container p,
-    .contact-container p {
-        width: 90%;
-        margin: 0 auto;
+    .contactContainer p {
+        font-size: 0.9rem;
     }
 
     .services {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     .card {
-        width: 90%;
-        margin: 10px 0;
+        padding: 1rem;
     }
 
     .project-images {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
     }
 
     .project-img {
-        width: 90%;
-        height: auto;
+        width: 100%;
     }
 
     .email {
-        flex-direction: column;
-        align-items: center;
+        font-size: 0.9rem;
     }
 
     .cv {
-        width: 100%;
-        margin: 10px auto;
+        font-size: 0.9rem;
     }
 
     .contact {
-        width: 100%;
-        margin: 10px auto;
+        font-size: 0.9rem;
     }
 
     #email {
-        width: 100%;
+        font-size: 0.9rem;
     }
 
     .imgInside {
-        width: 200px;
-        height: 200px;
+        width: 100%;
     }
 
     .footer-container {
-        padding: 20px;
+        padding: 1rem;
     }
 
     .socialsFoot i {
-        font-size: 1.5rem;
-        margin: 5px;
+        font-size: 1.2rem;
     }
 
     .copyright {
@@ -506,19 +484,12 @@ body.dark-mode .project-header p {
     }
 
     section {
-        padding: 0.5rem 0;
+        padding: 30px 0;
     }
 }
 
-/* Mobile Landscape View (932px) */
 @media (max-width: 932px) and (orientation: landscape) {
-    .nav-pills {
-        margin-left: 0 !important;
-        padding-left: 10% !important;
-    }
-
-    .nav-link {
-        font-size: 0.8rem !important;
-        padding: 0.3rem 0.6rem !important;
+    section {
+        padding: 20px 0;
     }
 }
