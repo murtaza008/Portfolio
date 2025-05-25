@@ -6,19 +6,19 @@ import frontend2 from '../frontend2.png';
 import frontend3 from '../frontend3.png';
 const projects = [
     {
-        title: 'Shopping List',
+        title: 'Expense Tracker',
+        image: frontend1,
+        link: 'https://murtaza008.github.io/expense-tracker/'
+    },
+    {
+        title: 'Weather App',
         image: frontend2,
-        link: 'https://murtaza008.github.io/Shopping-List/'
+        link: 'https://murtaza008.github.io/weather-app/'
     },
     {
         title: 'Todo Master',
-        image: frontend1,
-        link: 'https://murtaza008.github.io/todo-react-app/'
-    },
-    {
-        title: 'Simple Calculator',
         image: frontend3,
-        link: 'https://murtaza008.github.io/calculator-react-app/'
+        link: 'https://murtaza008.github.io/todo-react-app/'
     },
 ];
 
