@@ -75,3 +75,19 @@
         margin: 0.2rem 0;
     }
 }
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .service-description {
+        width: 53%;
+        font-size: 0.9rem;
+    }
+
+    .service-container {
+        height: auto;
+        width: 100%;
+    }
+
+    .service-container h1 {
+        font-size: 2.2rem;
+    }
+}

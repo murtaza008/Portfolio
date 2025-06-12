@@ -9,7 +9,7 @@ const HireButton = () => {
             className={`btn btn-primary ${style['btn-size']}`}
             onClick={downloadCV}
         >
-            Hire Me
+            Resume
         </button>
     )
 }

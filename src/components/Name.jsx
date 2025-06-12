@@ -1,9 +1,10 @@
 import React from 'react'
 import style from './Name.module.css'
+
 const Name = () => {
-    return <p className={`d-flex align-items-center mb-3 mb-md-0 me-md-auto ${style['name-container']}`} >
+    return <p className={`d-flex align-items-center mb-3 mb-md-0 me-md-auto ${style['name-container']} text-center text-md-start`}>
         <span className={style['name-text']}>Murtaza's Portfolio</span>
-    </p >
+    </p>
 }
 
 export default Name

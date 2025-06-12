@@ -1,0 +1,9 @@
+.animated-text {
+    font-weight: 700;
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .animated-text {
+        font-size: 2.2rem !important;
+    }
+}

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
+import './AnimatedText.css';
 
 const AnimatedName = () => {
     const el = useRef(null);
@@ -22,7 +23,7 @@ const AnimatedName = () => {
     }, []);
 
     return (
-        <h2 style={{ fontWeight: '700' }}>
+        <h2 className="animated-text">
             <span ref={el} />
         </h2>
     );

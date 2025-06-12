@@ -1,0 +1,15 @@
+.mainContent {
+    padding-top: 70px;
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .mainContent {
+        padding-top: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mainContent {
+        padding-top: 0;
+    }
+}

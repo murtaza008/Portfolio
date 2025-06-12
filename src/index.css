@@ -496,3 +496,121 @@ body.dark-mode .project-header p {
         padding: 20px 0;
     }
 }
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    body {
+        font-size: 1rem;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0 30px;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+
+    h1 {
+        font-size: 2.1rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1.3rem;
+    }
+
+    h5 {
+        font-size: 1.1rem;
+    }
+
+    h6 {
+        font-size: 1rem;
+    }
+
+    .myself-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about-container {
+        width: 100%;
+    }
+
+    .service-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .service-container .card {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .project-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .project-container .card {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .contactContainer {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .project-images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .social-links-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .summary-container {
+        padding: 2rem;
+    }
+
+    .carousel-container {
+        width: 90%;
+    }
+
+    .summary-para {
+        font-size: 1rem;
+    }
+
+    .service-container p,
+    .about-container p,
+    .project-description {
+        font-size: 0.95rem;
+    }
+
+    .position {
+        font-size: 1.1rem;
+    }
+
+    .position-text {
+        font-size: 0.95rem;
+    }
+}

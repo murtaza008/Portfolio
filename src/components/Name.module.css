@@ -1,11 +1,9 @@
 .name-container {
-    margin-left: 10%;
     font-weight: 700;
     color: #1a73e8 !important;
     height: 100%;
     white-space: nowrap;
     font-style: italic !important;
-
 }
 
 .name-text {
@@ -15,13 +13,12 @@
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .name-container {
-        margin-left: 28%;
+        margin: 0 auto;
         color: #1a73e8 !important;
     }
 
     .name-text {
         font-size: 1.2rem !important;
-
     }
 
     /* Ensure consistent color in dark mode */
@@ -39,4 +36,17 @@
     .name-text {
         font-size: 1rem !important;
     }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .name-container {
+        margin-left: 15%;
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    .name-text {
+        font-size: 1.3rem !important;
+    }
+
 }

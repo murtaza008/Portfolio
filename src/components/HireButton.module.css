@@ -1,5 +1,7 @@
 .btn-size {
     width: 20%;
+    font-style: italic !important;
+
 }
 
 @media (max-width: 768px) {

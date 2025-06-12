@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
 import { useIsMobile } from '../utils/deviceUtils';
+import './AnimatedText.css';
 
-const AnimatedDesignTogether = () => {
+function AnimatedDesignTogether() {
     const el = useRef(null);
     const isMobile = useIsMobile();
 
@@ -34,9 +35,8 @@ const AnimatedDesignTogether = () => {
             justifyContent: 'center'
         }}>
             <span
+                className="animated-text"
                 style={{
-                    fontWeight: 'bold',
-                    fontSize: isMobile ? '2rem' : '3rem',
                     display: 'inline-block',
                     minHeight: isMobile ? '2rem' : '3rem'
                 }}
@@ -44,6 +44,6 @@ const AnimatedDesignTogether = () => {
             />
         </h1>
     );
-};
+}
 
 export default AnimatedDesignTogether; 

@@ -9,7 +9,8 @@
 
 .navContainer {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -278,5 +279,38 @@ body.dark-mode .menuIcon::after {
     :global(.nav-item) {
         margin: 0 !important;
         padding: 0 !important;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .navContainer {
+        margin: 0;
+        padding: 0 1rem;
+        justify-content: flex-start;
+    }
+
+    .navList {
+        gap: 0.8rem;
+        margin-left: 1rem;
+    }
+
+    .navLink {
+        font-size: 0.85rem;
+        padding: 0.35rem 0.7rem;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    :global(.nav-pills) {
+        margin-right: 1% !important;
+        padding-right: 3% !important;
+        gap: 13px !important;
+    }
+
+    :global(.nav-link) {
+        font-size: 0.85rem !important;
+        padding: 0.35rem 0.7rem !important;
     }
 }

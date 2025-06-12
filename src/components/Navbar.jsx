@@ -76,7 +76,7 @@ const Navbar = () => {
 
             {/* Desktop Navigation */}
             {!isMobile && (
-                <ul className="nav nav-pills" style={{
+                <ul className={`nav nav-pills ${styles.navPills}`} style={{
                     marginLeft: '3%',
                     paddingLeft: '15%',
                     display: 'flex',
@@ -85,22 +85,22 @@ const Navbar = () => {
                     whiteSpace: 'nowrap'
                 }}>
                     <li className="nav-item">
-                        <a href="#home" className="nav-link" style={getLinkStyle('home')} onClick={handleNavClick('home')}>Home</a>
+                        <a href="#home" className={`nav-link ${styles.navLink}`} style={getLinkStyle('home')} onClick={handleNavClick('home')}>Home</a>
                     </li>
                     <li className="nav-item">
-                        <a href="#about" className="nav-link" style={getLinkStyle('about')} onClick={handleNavClick('about')}>About Me</a>
+                        <a href="#about" className={`nav-link ${styles.navLink}`} style={getLinkStyle('about')} onClick={handleNavClick('about')}>About Me</a>
                     </li>
                     <li className="nav-item">
-                        <a href="#services" className="nav-link" style={getLinkStyle('services')} onClick={handleNavClick('services')}>Services</a>
+                        <a href="#services" className={`nav-link ${styles.navLink}`} style={getLinkStyle('services')} onClick={handleNavClick('services')}>Services</a>
                     </li>
                     <li className="nav-item">
-                        <a href="#projects" className="nav-link" style={getLinkStyle('projects')} onClick={handleNavClick('projects')}>Projects</a>
+                        <a href="#projects" className={`nav-link ${styles.navLink}`} style={getLinkStyle('projects')} onClick={handleNavClick('projects')}>Projects</a>
                     </li>
                     <li className="nav-item">
-                        <a href="#contact" className="nav-link" style={getLinkStyle('contact')} onClick={handleNavClick('contact')}>Contact</a>
+                        <a href="#contact" className={`nav-link ${styles.navLink}`} style={getLinkStyle('contact')} onClick={handleNavClick('contact')}>Contact</a>
                     </li>
                     <li className="nav-item">
-                        <a href="#" className="nav-link active" onClick={handleDownloadCV}>Download CV</a>
+                        <a href="#" className={`nav-link active ${styles.navLink}`} onClick={handleDownloadCV}>Download CV</a>
                     </li>
                 </ul>
             )}

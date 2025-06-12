@@ -77,7 +77,7 @@ const Projects = () => {
                 <h1 style={{
                     fontWeight: 'bold',
                     fontSize: isMobile ? '2rem' : '3rem',
-                    marginBottom: isMobile ? '1rem' : '2rem'
+                    marginBottom: '1rem'
                 }}>
                     My Projects
                 </h1>

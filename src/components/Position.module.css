@@ -57,3 +57,13 @@
         margin-left: 25%;
     }
 }
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .change-color {
+        font-size: 2rem;
+    }
+
+    .developer {
+        margin-left: 16%;
+    }
+}

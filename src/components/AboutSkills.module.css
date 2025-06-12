@@ -195,3 +195,23 @@
         width: 75%;
     }
 }
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .about-skills-container {
+        width: 75%;
+        margin-left: 12.5%;
+
+    }
+
+    .skills-grid {
+        gap: 1.5rem;
+    }
+
+    .skill-name {
+        font-size: 0.8rem;
+    }
+
+    .skill-bar {
+        height: 7px;
+    }
+}

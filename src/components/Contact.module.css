@@ -218,3 +218,32 @@ body.dark-mode .contactInput::placeholder {
         min-width: 120px;
     }
 }
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .contactContainer {
+        padding: 2rem 1.5rem;
+    }
+
+    .contactContent {
+        max-width: 650px;
+    }
+
+    .contactText {
+        font-size: 0.9rem;
+        margin: 1.2rem auto;
+        width: 80%;
+    }
+
+    .contactInput {
+        width: 400px;
+        font-size: 0.9rem;
+        padding: 10px 14px;
+    }
+
+    .contactButton {
+        font-size: 0.9rem;
+        padding: 8px 18px;
+        height: 45px;
+    }
+
+}

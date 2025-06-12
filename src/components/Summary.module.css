@@ -142,3 +142,24 @@ body.dark-mode .description {
         margin-top: 1rem !important;
     }
 }
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .summary-container {
+        width: 60%;
+        margin-top: 4%;
+    }
+
+    .summary-container p {
+        width: 75%;
+        font-size: 0.9rem;
+    }
+
+    .summary-container p:first-child {
+        font-size: 1.1rem;
+    }
+
+    .description {
+        margin: 1.2rem 0;
+        font-size: 0.9rem;
+    }
+}
